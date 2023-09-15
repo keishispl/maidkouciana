@@ -1,36 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
-
-html {
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,700";html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
-
+selector {
+    color: value;
+}
 body {
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    margin: 0;
+    background: radial-gradient(#1b2735 0%,#090a0f 100%);
+    margin: 0
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
     display: block
 }
 
-audio,
-canvas,
-progress,
-video {
+audio,canvas,progress,video {
     display: inline-block;
     vertical-align: baseline
 }
@@ -40,8 +25,7 @@ audio:not([controls]) {
     height: 0
 }
 
-[hidden],
-template {
+[hidden],template {
     display: none
 }
 
@@ -49,18 +33,23 @@ a {
     background-color: transparent
 }
 
-a:active,
+a:link,a:visited,a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
 a:hover {
-    outline: 0
+  color: purple;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 abbr[title] {
     border-bottom: 1px dotted
 }
 
-b,
-strong {
-    font-weight: bold
+b,strong {
+    font-weight: 700
 }
 
 dfn {
@@ -69,7 +58,7 @@ dfn {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0
+    margin: .67em 0
 }
 
 mark {
@@ -81,8 +70,7 @@ small {
     font-size: 80%
 }
 
-sub,
-sup {
+sub,sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
@@ -90,11 +78,11 @@ sup {
 }
 
 sup {
-    top: -0.5em
+    top: -.5em
 }
 
 sub {
-    bottom: -0.25em
+    bottom: -.25em
 }
 
 img {
@@ -118,19 +106,12 @@ pre {
     overflow: auto
 }
 
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace;
+code,kbd,pre,samp {
+    font-family: monospace,monospace;
     font-size: 1em
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button,input,optgroup,select,textarea {
     color: inherit;
     font: inherit;
     margin: 0
@@ -140,26 +121,20 @@ button {
     overflow: visible
 }
 
-button,
-select {
+button,select {
     text-transform: none
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button,html input[type=button],input[type=reset],input[type=submit] {
     -webkit-appearance: button;
     cursor: pointer
 }
 
-button[disabled],
-html input[disabled] {
+button[disabled],html input[disabled] {
     cursor: default
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner,input::-moz-focus-inner {
     border: 0;
     padding: 0
 }
@@ -168,31 +143,28 @@ input {
     line-height: normal
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox],input[type=radio] {
     box-sizing: border-box;
     padding: 0
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button {
     height: auto
 }
 
-input[type="search"] {
+input[type=search] {
     -webkit-appearance: textfield;
     box-sizing: content-box
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration {
     -webkit-appearance: none
 }
 
 fieldset {
-    border: 1px solid #c0c0c0;
+    border: 1px solid silver;
     margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em
+    padding: .35em .625em .75em
 }
 
 legend {
@@ -205,7 +177,7 @@ textarea {
 }
 
 optgroup {
-    font-weight: bold
+    font-weight: 700
 }
 
 table {
@@ -213,8 +185,7 @@ table {
     border-spacing: 0
 }
 
-td,
-th {
+td,th {
     padding: 0
 }
 
@@ -227,29 +198,28 @@ th {
 }
 
 .highlight .cm {
-    color: #999988;
+    color: #998;
     font-style: italic
 }
 
 .highlight .cp {
-    color: #999999;
-    font-weight: bold
+    color: #999;
+    font-weight: 700
 }
 
 .highlight .c1 {
-    color: #999988;
+    color: #998;
     font-style: italic
 }
 
 .highlight .cs {
-    color: #999999;
-    font-weight: bold;
+    color: #999;
+    font-weight: 700;
     font-style: italic
 }
 
-.highlight .c,
-.highlight .cd {
-    color: #999988;
+.highlight .c,.highlight .cd {
+    color: #998;
     font-style: italic
 }
 
@@ -259,108 +229,105 @@ th {
 }
 
 .highlight .gd {
-    color: #000000;
-    background-color: #ffdddd
+    color: #000;
+    background-color: #fdd
 }
 
 .highlight .ge {
-    color: #000000;
+    color: #000;
     font-style: italic
 }
 
 .highlight .gr {
-    color: #aa0000
+    color: #a00
 }
 
 .highlight .gh {
-    color: #999999
+    color: #999
 }
 
 .highlight .gi {
-    color: #000000;
-    background-color: #ddffdd
+    color: #000;
+    background-color: #dfd
 }
 
 .highlight .go {
-    color: #888888
+    color: #888
 }
 
 .highlight .gp {
-    color: #555555
+    color: #555
 }
 
 .highlight .gs {
-    font-weight: bold
+    font-weight: 700
 }
 
 .highlight .gu {
-    color: #aaaaaa
+    color: #aaa
 }
 
 .highlight .gt {
-    color: #aa0000
+    color: #a00
 }
 
 .highlight .kc {
-    color: #000000;
-    font-weight: bold
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .kd {
-    color: #000000;
-    font-weight: bold
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .kn {
-    color: #000000;
-    font-weight: bold
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .kp {
-    color: #000000;
-    font-weight: bold
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .kr {
-    color: #000000;
-    font-weight: bold
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .kt {
-    color: #445588;
-    font-weight: bold
+    color: #458;
+    font-weight: 700
 }
 
-.highlight .k,
-.highlight .kv {
-    color: #000000;
-    font-weight: bold
+.highlight .k,.highlight .kv {
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .mf {
-    color: #009999
+    color: #099
 }
 
 .highlight .mh {
-    color: #009999
+    color: #099
 }
 
 .highlight .il {
-    color: #009999
+    color: #099
 }
 
 .highlight .mi {
-    color: #009999
+    color: #099
 }
 
 .highlight .mo {
-    color: #009999
+    color: #099
 }
 
-.highlight .m,
-.highlight .mb,
-.highlight .mx {
-    color: #009999
+.highlight .m,.highlight .mb,.highlight .mx {
+    color: #099
 }
 
 .highlight .sb {
@@ -412,86 +379,86 @@ th {
 }
 
 .highlight .na {
-    color: #008080
+    color: teal
 }
 
 .highlight .bp {
-    color: #999999
+    color: #999
 }
 
 .highlight .nb {
-    color: #0086B3
+    color: #0086b3
 }
 
 .highlight .nc {
-    color: #445588;
-    font-weight: bold
+    color: #458;
+    font-weight: 700
 }
 
 .highlight .no {
-    color: #008080
+    color: teal
 }
 
 .highlight .nd {
     color: #3c5d5d;
-    font-weight: bold
+    font-weight: 700
 }
 
 .highlight .ni {
-    color: #800080
+    color: purple
 }
 
 .highlight .ne {
-    color: #990000;
-    font-weight: bold
+    color: #900;
+    font-weight: 700
 }
 
 .highlight .nf {
-    color: #990000;
-    font-weight: bold
+    color: #900;
+    font-weight: 700
 }
 
 .highlight .nl {
-    color: #990000;
-    font-weight: bold
+    color: #900;
+    font-weight: 700
 }
 
 .highlight .nn {
-    color: #555555
+    color: #555
 }
 
 .highlight .nt {
-    color: #000080
+    color: navy
 }
 
 .highlight .vc {
-    color: #008080
+    color: teal
 }
 
 .highlight .vg {
-    color: #008080
+    color: teal
 }
 
 .highlight .vi {
-    color: #008080
+    color: teal
 }
 
 .highlight .nv {
-    color: #008080
+    color: teal
 }
 
 .highlight .ow {
-    color: #000000;
-    font-weight: bold
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .o {
-    color: #000000;
-    font-weight: bold
+    color: #000;
+    font-weight: 700
 }
 
 .highlight .w {
-    color: #bbbbbb
+    color: #bbb
 }
 
 .highlight {
@@ -505,7 +472,7 @@ th {
 body {
     padding: 0;
     margin: 0;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: open sans,helvetica neue,Helvetica,Arial,sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #ababab
@@ -523,20 +490,20 @@ a:hover {
 .btn {
     display: inline-block;
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    color: red;
+    background-color: transparent;
+    border-color: red;
     border-style: solid;
     border-width: 1px;
-    border-radius: 0.3rem;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s
+    border-radius: .3rem;
+    transition: color .2s,background-color .2s,border-color .2s
 }
 
 .btn:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: purple;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3)
+    background-color: transparent;
+    border-color: purple;
 }
 
 .btn+.btn {
@@ -545,23 +512,23 @@ a:hover {
 
 @media screen and (min-width: 64em) {
     .btn {
-        padding: 0.75rem 1rem
+        padding:.75rem 1rem
     }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 42em) and (max-width:64em) {
     .btn {
-        padding: 0.6rem 0.9rem;
-        font-size: 0.9rem
+        padding:.6rem .9rem;
+        font-size: .9rem
     }
 }
 
 @media screen and (max-width: 42em) {
     .btn {
-        display: block;
+        display:block;
         width: 100%;
-        padding: 0.75rem;
-        font-size: 0.9rem
+        padding: .75rem;
+        font-size: .9rem
     }
 
     .btn+.btn {
@@ -573,71 +540,71 @@ a:hover {
 .page-header {
     color: #fff;
     text-align: center;
-    background-image: linear-gradient(120deg, #4d76a2, #2c5639);
+    background-image: url("https://wallpapercave.com/wp/wp2394336.jpg");
 }
 
 @media screen and (min-width: 64em) {
     .page-header {
-        padding: 5rem 6rem
+        padding:5rem 6rem
     }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 42em) and (max-width:64em) {
     .page-header {
-        padding: 3rem 4rem
+        padding:3rem 4rem
     }
 }
 
 @media screen and (max-width: 42em) {
     .page-header {
-        padding: 2rem 1rem
+        padding:2rem 1rem
     }
 }
 
 .project-name {
     margin-top: 0;
-    margin-bottom: 0.1rem
+    margin-bottom: .1rem
 }
 
 @media screen and (min-width: 64em) {
     .project-name {
-        font-size: 3.25rem
+        font-size:3.25rem
     }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 42em) and (max-width:64em) {
     .project-name {
-        font-size: 2.25rem
+        font-size:2.25rem
     }
 }
 
 @media screen and (max-width: 42em) {
     .project-name {
-        font-size: 1.75rem
+        font-size:1.75rem
     }
 }
 
 .project-tagline {
     margin-bottom: 2rem;
-    font-weight: normal;
-    opacity: 0.7
+    font-weight: 400;
+    opacity: .7
 }
 
 @media screen and (min-width: 64em) {
     .project-tagline {
-        font-size: 1.25rem
+        font-size:1.25rem
     }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 42em) and (max-width:64em) {
     .project-tagline {
-        font-size: 1.15rem
+        font-size:1.15rem
     }
 }
 
 @media screen and (max-width: 42em) {
     .project-tagline {
-        font-size: 1rem
+        font-size:1rem
     }
 }
 
@@ -651,23 +618,23 @@ a:hover {
 
 @media screen and (min-width: 64em) {
     .main-content {
-        max-width: 64rem;
+        max-width:64rem;
         padding: 2rem 6rem;
         margin: 0 auto;
         font-size: 1.1rem
     }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 42em) and (max-width:64em) {
     .main-content {
-        padding: 2rem 4rem;
+        padding:2rem 4rem;
         font-size: 1.1rem
     }
 }
 
 @media screen and (max-width: 42em) {
     .main-content {
-        padding: 2rem 1rem;
+        padding:2rem 1rem;
         font-size: 1rem
     }
 }
@@ -676,15 +643,10 @@ a:hover {
     max-width: 100%
 }
 
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6 {
+.main-content h1,.main-content h2,.main-content h3,.main-content h4,.main-content h5,.main-content h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-weight: normal;
+    font-weight: 400;
     color: #159957
 }
 
@@ -694,33 +656,33 @@ a:hover {
 
 .main-content code {
     padding: 2px 4px;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 0.9rem;
+    font-family: Consolas,liberation mono,Menlo,Courier,monospace;
+    font-size: .9rem;
     color: #cacaca;
-    background-color: #444444;
-    border-radius: 0.3rem
+    background-color: #444;
+    border-radius: .3rem
 }
 
 .main-content pre {
-    padding: 0.8rem;
+    padding: .8rem;
     margin-top: 0;
     margin-bottom: 1rem;
-    font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font: 1rem Consolas,liberation mono,Menlo,Courier,monospace;
     color: #567482;
     word-wrap: normal;
     background-color: #f3f6fa;
     border: solid 1px #dce6f0;
-    border-radius: 0.3rem
+    border-radius: .3rem
 }
 
 .main-content pre>code {
     padding: 0;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: .9rem;
     color: #567482;
     word-break: normal;
     white-space: pre;
-    background: transparent;
+    background: 0 0;
     border: 0
 }
 
@@ -733,18 +695,16 @@ a:hover {
     word-break: normal
 }
 
-.main-content .highlight pre,
-.main-content pre {
-    padding: 0.8rem;
+.main-content .highlight pre,.main-content pre {
+    padding: .8rem;
     overflow: auto;
-    font-size: 0.9rem;
+    font-size: .9rem;
     line-height: 1.45;
-    border-radius: 0.3rem;
+    border-radius: .3rem;
     -webkit-overflow-scrolling: touch
 }
 
-.main-content pre code,
-.main-content pre tt {
+.main-content pre code,.main-content pre tt {
     display: inline;
     max-width: initial;
     padding: 0;
@@ -756,15 +716,11 @@ a:hover {
     border: 0
 }
 
-.main-content pre code:before,
-.main-content pre code:after,
-.main-content pre tt:before,
-.main-content pre tt:after {
+.main-content pre code:before,.main-content pre code:after,.main-content pre tt:before,.main-content pre tt:after {
     content: normal
 }
 
-.main-content ul,
-.main-content ol {
+.main-content ul,.main-content ol {
     margin-top: 0
 }
 
@@ -772,7 +728,7 @@ a:hover {
     padding: 0 1rem;
     margin-left: 0;
     color: #819198;
-    border-left: 0.3rem solid #dce6f0
+    border-left: .3rem solid #dce6f0
 }
 
 .main-content blockquote>:first-child {
@@ -793,12 +749,11 @@ a:hover {
 }
 
 .main-content table th {
-    font-weight: bold
+    font-weight: 700
 }
 
-.main-content table th,
-.main-content table td {
-    padding: 0.5rem 1rem;
+.main-content table th,.main-content table td {
+    padding: .5rem 1rem;
     border: 1px solid #e9ebec
 }
 
@@ -810,7 +765,7 @@ a:hover {
     padding: 0;
     margin-top: 1rem;
     font-size: 1rem;
-    font-weight: bold
+    font-weight: 700
 }
 
 .main-content dl dd {
@@ -834,25 +789,25 @@ a:hover {
 
 @media screen and (min-width: 64em) {
     .site-footer {
-        font-size: 1rem
+        font-size:1rem
     }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@media screen and (min-width: 42em) and (max-width:64em) {
     .site-footer {
-        font-size: 1rem
+        font-size:1rem
     }
 }
 
 @media screen and (max-width: 42em) {
     .site-footer {
-        font-size: 0.9rem
+        font-size:.9rem
     }
 }
 
 .site-footer-owner {
     display: block;
-    font-weight: bold
+    font-weight: 700
 }
 
 .site-footer-credits {
