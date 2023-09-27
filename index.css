@@ -6,8 +6,30 @@
 selector {
     color: value;
 }
+
+.form-box {
+    position: relative;
+    background: transparent;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 body {
-    background: radial-gradient(#1b2735 0%,#090a0f 100%);
+    background: url("https://naniwallpaper.com/files/wallpapers/anime-night/14-anime%20night-1080x1920.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat; no-repeat;
+    margin: 0
+}
+.command {
+    background: url("https://images6.alphacoders.com/692/692056.png")no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat; no-repeat;
     margin: 0
 }
 
@@ -182,7 +204,13 @@ optgroup {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: auto;
 }
 
 td,th {
@@ -741,7 +769,6 @@ a:hover {
 
 .main-content table {
     display: block;
-    width: 100%;
     overflow: auto;
     word-break: normal;
     word-break: keep-all;
