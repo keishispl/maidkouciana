@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#CBC3E3">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" href="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-    <link rel="stylesheet" href="../commands.css">
+    <link rel="stylesheet" href="../index.css">
     <style>
         .btn.sl
 
@@ -237,23 +237,19 @@
 </style>
 </head>
 <body>
-<header class="page-header" role="banner">
-<a href=".." class="btn">Home</a>
-<a href="https://bit.ly/maidkouciana" class="btn">Invite Bot</a>
-<a href="https://discord.gg/tEcEGxugKt" class="btn sl">Discord Server</a>
-</header>
-
 <main id="content" class="main-content" role="main">
+    <div class="form-box">
+        <br>
+        <a href=".." class="btn sl">Home</a>
+        <a href="https://bit.ly/maidkouciana" class="btn">Invite Bot</a>
+        <a href="https://discord.gg/tEcEGxugKt" class="btn">Discord Server</a>
+        <br>
     <h1 style="color: white;"><b>MaidKouciana Documentation</b></h1>
     <p>Documentation Version <code>1.9</code></p>
     <h2>Prefixes and Arguments</h2>
-    <blockquote>
     <p>Uses both <code>/</code> and <code>mk.</code><br>Arguments: <code>&lt;&gt;</code> If Optional: <code>[]</code></p>
-    </blockquote>
     <h2>Help Command</h2>
-    <blockquote>
-    <p>Slash Commands:<li><code>/help [&lt;category&gt;]</code></li><br>Non-Slash Commands:<br><br><li>Categories: <code>mk.help</code></li><li>Subcommands: <code>mk.&lt;category&gt;.</code></li></p>
-    </blockquote>
+    <p>Slash Commands:<p><code>/help [&lt;category&gt;]</code></p><br>Non-Slash Commands:<br><br><p>Finding Categories: <code>mk.help</code></p><p>Finding Commands of Categories: <code>mk.&lt;category&gt;.</code></p></p>
     <h2 id="nonslash">Non-Slash Commands</h2>
     <table>
     <thread>
@@ -279,14 +275,14 @@
             <td>Check if yourself down below</td>
         </tr>
     </table>
-    <h2 id="general" style="color: gray;">General</h2>
+    <h2 id="general" style="color: orange;">General</h2>
     <p><code>mk.help</code> Help for categories in non-slash commands</p>
     <p><code>mk.cake</code> Gives you a cake</p>
-    <h2 id="interact" style="color: gray;">Interaction</h2>
+    <h2 id="interact" style="color: orange;">Interaction</h2>
     <p><code style="color: red;">mk.i.</code> Help command for Interactions</p>
     <p><code>mk.i.hug &lt;@user&gt;</code> Give someone a hug</p>
     <p><code>mk.i.kiss &lt;@user&gt;</code> Kiss someone</p>
-    <h2 id="splat" style="color: gray;">Splatoon 2 & 3</h2>
+    <h2 id="splat" style="color: orange;">Splatoon 2 & 3</h2>
     <p><code style="color: red;">mk.2.</code> Help command for Splatoon 2</p>
     <p><code>mk.2.r</code> Splatoon 2 Turf War rotations</p>
     <p><code>mk.2.a</code> Splatoon 2 Ranked Battle rotations</p>
@@ -337,7 +333,7 @@
             <td>assgrab, blowjob, boobsgrab, creampie, cum, dickride, footjob, fuck, handjob, pussyeat, spank, strip</td>
         </tr>
     </table>
-    <h2 id="fun" style="color: gray;">Fun Commands</h2>
+    <h2 id="fun" style="color: orange;">Fun Commands</h2>
     <p><code>/8ball &lt;question&gt;</code> Ask 8ball something</p>
     <p><code>/advice</code> Get some advice</p>
     <p><code>/booba</code> ...</p>
@@ -348,7 +344,7 @@
     <p><code>/roll &lt;number&gt;</code> Roll a number from a specific number of sides</p>
     <p><code>/rps &lt;rock/paper/scissors&gt;</code> Play Rock Paper Scissors with the maid</p>
     <p><code>/say &lt;text&gt;</code> Say something as the bot, great for trolling</p>
-    <h2 id="interaction" style="color: gray;">Interaction Commands</h2>
+    <h2 id="interaction" style="color: orange;">Interaction Commands</h2>
     <p><code>/bite [&lt;@user&gt;]</code> Bite someone</p>
     <p><code>/cuddle [&lt;@user&gt;]</code> Cuddle someone</p>
     <p><code>/highfive [&lt;@user&gt;]</code> High-five someone</p>
@@ -361,7 +357,7 @@
     <p><code>/punch [&lt;@user&gt;]</code> Punch someone</p>
     <p><code>/squish [&lt;@user&gt;]</code> Squish someone</p>
     <p><code>/yeet [&lt;@user&gt;]</code> Yeet someone</p>
-    <h2 id="action" style="color: gray;">Action Commands</h2>
+    <h2 id="action" style="color: orange;">Action Commands</h2>
     <p><code>/angry</code> Be angry >:(</p>
     <p><code>/awkward</code> Be awkward >-<</p>
     <p><code>/blush</code> Shy.. owo</p>
@@ -369,26 +365,27 @@
     <p><code>/dance</code> Dance! La la la la !</p>
     <p><code>/eat</code> Eatin'! Nom Nom Nom</p>
     <p><code>/smile</code> :)</p>
-    <h2 id="util" style="color: gray;">Utilities Commands</h2>
+    <h2 id="util" style="color: orange;">Utilities Commands</h2>
     <p><code>/avatar user &lt;@user&gt;</code> Get someone's avatar</p>
     <p><code>/avatar server</code> Get the server icon</p>
     <p><code>/discord</code> Invite de bot or join our support server!</p>
     <p><code>/ping</code> Pong!</p>
     <p><code>/poll &lt;name&gt; &lt;one&gt; &lt;two&gt; [&lt;three&gt;] [&lt;four&gt;] [&lt;five&gt;]</code> Create a poll</p>
-    <h2 id="splatoon" style="color: gray;">Splatoon 2 & 3 Commands</h2>
-    <h3 style="color: dark_cyan;">Splatoon 2</h3>
+    <h2 id="splatoon" style="color: orange;">Splatoon 2 & 3 Commands</h2>
+    <h3 style="color: white;">Splatoon 2</h3>
     <p><code>/splatoon2 random &lt;option&gt;</code> Get a random option from many</p>
     <p><code>/splatoon2 list &lt;option&gt;</code> Get a list of all of option</p>
     <p><code>/splatoon2 schedule &lt;mode&gt;</code> Get the schedule for a mode</p>
-    <h3 style="color: dark_cyan;">Splatoon 3</h3>
+    <h3 style="color: white;">Splatoon 3</h3>
     <p><code>/splatoon3 random &lt;option&gt;</code> Get a random option from many</p>
     <p><code>/splatoon3 list &lt;option&gt;</code> Get a list of all of option</p>
     <p><code>/splatoon3 schedule &lt;mode&gt;</code> Get the schedule for a mode</p>
     <p><code>/splatoon3 createkit help</code> Help for createkit <a style="color: red;">[NOT RECOMMENDED]</a></p>
     <p><code>/splatoon3 createkit &lt;name&gt; &lt;weapon&gt; &lt;sub&gt; &lt;special&gt; &lt;points&gt;</code> <a style="color: red;">[NOT RECOMMENDED]</a></p>
-    <h2 style="color: gray;" id="#nsfw">⚠️ NSFW Commands</h2>
+    <h2 style="color: orange;" id="#nsfw">⚠️ NSFW Commands</h2>
     <p>In the NSFW section below will contain adult content, you are responsible for reading them.</p>
-    <details><summary style="color: red;">Click to Reveal</summary>
+    <br><br>
+    <h2 style="color: red;">⚠️You have been warned. ⚠️</h2><br>
         <p><code>/assgrab [&lt;@user&gt;]</code> Grab someone's ass</p>
         <p><code>/blowjob [&lt;@user&gt;]</code> Blowjob someone</p>
         <p><code>/boobsgrab [&lt;@user&gt;]</code> Grab someone's boobs</p>
@@ -402,9 +399,11 @@
         <p><code>/spank [&lt;@user&gt;]</code> Spank someone</p>
         <p><code>/strip [&lt;@user&gt;]</code> Strip someone naked</p>
     </details>
-    <footer class="site-footer">
+    <br>
+        <span class="site-footer-owner"><=============================================></span>
         <span class="site-footer-owner">MaidKouciana is maintained by <a href="https://github.com/Kouciana">Kouciana</a>.</span>
     </footer>
+    </div>
 </main>
 </body>
 </html>
