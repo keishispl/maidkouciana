@@ -246,11 +246,11 @@
         <br>
         <h2 style="color: white;"><b>MaidKouciana Documentation</b></h2>
         <h1 style="color: white;">Text Commands</h1>
-        <p>Text Commands Documentation Version <code>1.9</code></p>
+        <p>Text Commands Documentation Version <code>2.2</code></p>
         <h2>Prefixes and Arguments</h2>
         <p>Text Commands Prefix: <code>mk.</code><br>Required Arguments: <code>&lt;&gt;</code> Optional Arguments: <code>[<>]</code></p>
         <h2>Must-Know Commands</h2>
-        <p>List of all Categories: <code>mk.help</code><br>Help within a Category: <code>mk.&lt;category&gt;.</code></p>
+        <p>List of all Categories: <code>mk.help</code><br>Help within a Category: <code>mk.help.&lt;category name&gt;</code></p>
         <h2>Graph</h2>
         <table>
             <thread>
@@ -263,7 +263,7 @@
             <tr>
                 <td><a href="#general">General</a></td>
                 <td>A general section with no categories</td>
-                <td>help, cake</td>
+                <td>help, cake, 8, temp, yesorno, rps</td>
             </tr>
             <tr>
                 <td><a href="#interaction">Interaction</a></td>
@@ -277,23 +277,33 @@
             </tr>
         </table>
         <h2 id="general" style="color: orange;">General</h2>
-        <p><code>mk.help</code> Help for categories in non-slash commands</p>
+        <p><code>mk.help</code> Global Help Command</p>
         <p><code>mk.cake</code> Gives you a cake</p>
+        <p><code>mk.yesorno</code> Returns either yes or no</p>
+        <br>
+        <p><code>mk.8.ratio</code> Ratio the Eightball</p>
+        <p><code>mk.8.&lt;question&gt;</code> Ask the Eightball a question</p>
+        <br>
+        <p><code>mk.temp.&lt;number&gt;&lt;c/f/k&gt;</code> Convert Temperature</p>
+        <br>
+        <p><code>mk.rps.&lt;rock/paper/scissors&gt;</code> Play RPS with the bot</p>
         <h2 id="interaction" style="color: orange;">Interaction</h2>
-        <p><code style="color: red;">mk.i.</code> Help command for Interactions</p>
         <p><code>mk.i.hug &lt;@user&gt;</code> Give someone a hug</p>
         <p><code>mk.i.kiss &lt;@user&gt;</code> Kiss someone</p>
         <h2 id="splatoon" style="color: orange;">Splatoon 2 & 3</h2>
-        <p><code style="color: red;">mk.2.</code> Help command for Splatoon 2</p>
+        <p><code><a style="color: red;">mk.2.</a></code> Check current Splatoon 2 rotations</p>
         <p><code>mk.2.r</code> Splatoon 2 Turf War rotations</p>
         <p><code>mk.2.a</code> Splatoon 2 Ranked Battle rotations</p>
         <p><code>mk.2.l</code> Splatoon 2 League Battle rotations</p>
         <p><code>mk.2.s</code> Current Splatoon 2 Salmon Run rotation</p>
-        <p><code style="color: red;">mk.2.</code> Help command for Splatoon 3</p>
+        <p><code><a style="color: red;">mk.3.</a></code> Check current Splatoon 3 rotations</p>
         <p><code>mk.3.r</code> Splatoon 3 Turf War rotations</p>
         <p><code>mk.3.a</code> Splatoon 3 Anarchy Battle rotations</p>
+        <p><code>mk.3.s</code> Splatoon 3 Salmon Run rotation</p>
         <p><code>mk.3.x</code> Splatoon 3 X Battle rotations</p>
-        <p><code>mk.3.s</code> Current Splatoon 3 Salmon Run rotation</p>
+        <p><code>mk.3.x.&lt;region&gt;</code> Check a region's top X power people</p>
+        <p><code>mk.3.map("&lt;Map Name&gt;", "&lt;Gamemode&gt;", "&lt;Map/Top&gt;")</code> Check map properties and image</p>
+        <p><code>mk.3.map.howto</code> Help for command above</p>
         <br><br>
         <span class="site-footer-owner">MaidKouciana is maintained by <a href="https://github.com/Kouciana">Kouciana</a>.</span>
     </div>
