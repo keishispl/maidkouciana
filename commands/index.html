@@ -2,15 +2,15 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Slash Commands - MaidKouciana</title>
+    <title>Commands - MaidKouciana</title>
     <meta property="og:image" content="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-    <meta content="A Discord Bot made by Kouciana with multiple functions. Currently redirects to the Slash Commands page." property="og:description">
+    <meta content="A Discord Bot made by Kouciana with multiple functions. Currently redirects to the Commands page." property="og:description">
     <meta name="author" content="Kouciana">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#CBC3E3">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" href="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="../index.css">
     <style>
         .btn.sl
 
@@ -234,115 +234,28 @@
     details > p {
         margin: 5;
     }
-    </style>
+</style>
 </head>
-<body class="special">
+<body class="command">
 <main id="content" class="main-content" role="main">
     <div class="form-box">
         <br>
-        <a href=".." class="btn sl">Go Back</a>
+        <a href=".." class="btn sl">Home</a>
         <a href="https://bit.ly/maidkouciana" class="btn">Invite Bot</a>
         <a href="https://discord.gg/tEcEGxugKt" class="btn">Discord Server</a>
         <br>
-        <h2 style="color: white;"><b>MaidKouciana Documentation</b></h2>
-        <h1 style="color: white;">Slash Commands</h1>
-        <p>Slash Commands Documentation Version <code>2.2.1</code></p>
+    <h1 style="color: white;"><b>MaidKouciana Documentation</b></h1>
+        <p>Text Commands Documentation Version <code>2.2</code><br>Slash Commands Documentation Version <code>2.2.1</code></p>
+        <h2>Contents</h2>
+        <a href="text" class="btn">Text Commands</a>
+        <a href="slash" class="btn">Slash Commands</a>
         <h2>Prefixes and Arguments</h2>
-        <p>Slash Commands Prefix: <code>/</code><br>Required Arguments: <code>&lt;&gt;</code> Optional Arguments: <code>[<>]</code></p>
+        <p>Text Commands Prefix: <code>mk.</code><br>Slash Commands Prefix: <code>/</code></p>
+        <p><br>Required Arguments: <code>&lt;&gt;</code><br>Optional Arguments: <code>[<>]</code></p>
         <h2>Must-Know Commands</h2>
+        <p>List of all Categories: <code>mk.help</code><br>Help within a Category: <code>mk.&lt;category&gt;.</code></p>
         <p>List of all Categories: <code>/help</code><br>Help within a Category: <code>/help &lt;category&gt;</code></p>
-        <h2>Graph</h2>
-        <table>
-            <thread>
-                <tr>
-                    <th>Categories</th>
-                    <th>Description</th>
-                    <th>Commands</th>
-                </tr>
-            </thread>
-            <tr>
-                <td><a href="#fun">Fun</a></td>
-                <td>A category with unique, fun commands</td>
-                <td>8ball, advice, booba, compliment, fact, insult, rickroll, roll, rps, say</td>
-            </tr>
-            <tr>
-                <td><a href="#interaction">Interaction</a></td>
-                <td>Express what you want to do</td>
-                <td>bite, cuddle, highfive, hug, kiss, lick, pat, poke, punch, squish, yeet</td>
-            </tr>
-            <tr>
-                <td><a href="#action">Action</a></td>
-                <td>Express your emotions</td>
-                <td>angry, awkward, blush, cry, dance, eat, smile</td>
-            </tr>
-            <tr>
-                <td><a href="#utilities">Utilities</a></td>
-                <td>The seriousness!</td>
-                <td>avatar, discord, ping, poll</td>
-            </tr>
-            <tr>
-                <td><a href="#splatoon">Splatoon 2 & 3</a></td>
-                <td>Commands for Splatoon 2 and 3</td>
-                <td>s2, s3</td>
-            </tr>
-            <tr>
-                <td><a href="#nsfw">NSFW</a></td>
-                <td>Adult content warning 18+</td>
-                <td>Enter the NSFW Zone to view.</td>
-            </tr>
-        </table>
-        <h2 id="fun" style="color: orange;">Fun Commands</h2>
-        <p><code>/8ball &lt;question&gt;</code> Ask 8ball something</p>
-        <p><code>/advice</code> Get some advice</p>
-        <p><code>/booba</code> ...</p>
-        <p><code>/compliment</code> Get some compliments</p>
-        <p><code>/fact &lt;category&gt;</code> Get a fact from a specific category</p>
-        <p><code>/insult</code> Get insulted</p>
-        <p><code>/rickroll [&lt;@user&gt;]</code> Rickroll someone</p>
-        <p><code>/roll &lt;number&gt;</code> Roll a number from a specific number of sides</p>
-        <p><code>/rps &lt;rock/paper/scissors&gt;</code> Play Rock Paper Scissors with the maid</p>
-        <p><code>/say &lt;text&gt;</code> Say something as the bot, great for trolling</p>
-        <h2 id="interaction" style="color: orange;">Interaction Commands</h2>
-        <p><code>/bite [&lt;@user&gt;]</code> Bite someone</p>
-        <p><code>/cuddle [&lt;@user&gt;]</code> Cuddle someone</p>
-        <p><code>/highfive [&lt;@user&gt;]</code> High-five someone</p>
-        <p><code>/hug [&lt;@user&gt;]</code> Hug someone</p>
-        <p><code>/kiss [&lt;@user&gt;]</code> Kiss someone</p>
-        <p><code>/lick [&lt;@user&gt;]</code> Lick someone</p>
-        <p><code>/bite [&lt;@user&gt;]</code> Bite someone</p>
-        <p><code>/pat [&lt;@user&gt;]</code> Pat someone</p>
-        <p><code>/poke [&lt;@user&gt;]</code> Poke someone</p>
-        <p><code>/punch [&lt;@user&gt;]</code> Punch someone</p>
-        <p><code>/squish [&lt;@user&gt;]</code> Squish someone</p>
-        <p><code>/yeet [&lt;@user&gt;]</code> Yeet someone</p>
-        <h2 id="action" style="color: orange;">Action Commands</h2>
-        <p><code>/angry</code> Be angry >:(</p>
-        <p><code>/awkward</code> Be awkward >-<</p>
-        <p><code>/blush</code> Shy.. owo</p>
-        <p><code>/cry</code> Cry!! Wahhhh..! D:</p>
-        <p><code>/dance</code> Dance! La la la la !</p>
-        <p><code>/eat</code> Eatin'! Nom Nom Nom</p>
-        <p><code>/smile</code> :)</p>
-        <h2 id="utilities" style="color: orange;">Utilities Commands</h2>
-        <p><code>/avatar user &lt;@user&gt;</code> Get someone's avatar</p>
-        <p><code>/avatar server</code> Get the server icon</p>
-        <p><code>/discord</code> Invite de bot or join our support server!</p>
-        <p><code>/ping</code> Pong!</p>
-        <p><code>/poll &lt;name&gt; &lt;one&gt; &lt;two&gt; [&lt;three&gt;] [&lt;four&gt;] [&lt;five&gt;]</code> Create a poll</p>
-        <h2 id="splatoon" style="color: orange;">Splatoon 2 & 3 Commands</h2>
-        <h3 style="color: white;">Splatoon 2</h3>
-        <p><code>/s2 random &lt;option&gt;</code> Get a random option from many</p>
-        <p><code>/s2 list &lt;option&gt;</code> Get a list of all of option</p>
-        <p><code>/s2 schedule &lt;mode&gt;</code> Get the schedule for a mode</p>
-        <p><a style="color: red;">["Salmon Run" Gamemode Option Temporarily Disabled]</a></p>
-        <h3 style="color: white;">Splatoon 3</h3>
-        <p><code>/s3 random &lt;option&gt;</code> Get a random option from many</p>
-        <p><code>/s3 list &lt;option&gt;</code> Get a list of all of option</p>
-        <p><code>/s3 schedule &lt;mode&gt;</code> Get the schedule for a mode</p>
-        <h2 style="color: orange;" id="nsfw">⚠️ NSFW Commands</h2>
-        <p>In the NSFW section below will contain adult content, you are responsible for reading them.</p>
-        <a href="nsfw" class="btn">Enter the NSFW zone</a>
-        <br><br>
+    <br><br>
         <span class="site-footer-owner">MaidKouciana is maintained by <a href="https://github.com/Kouciana">Kouciana</a>.</span>
     </div>
 </main>
