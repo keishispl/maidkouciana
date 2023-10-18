@@ -13,11 +13,10 @@ selector {
     justify-content: top;
     align-items: center;
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.4);
 }
-
 .special {
     background: url("https://wallpapers.com/images/hd/night-anime-aesthetic-city-nrel1vvg6lhn8fzb.jpg")no-repeat;
     background-size: cover;
@@ -64,7 +63,7 @@ audio:not([controls]) {
 }
 
 a {
-    background-color: transparent
+    background-color: transparent;
 }
 
 a:link,a:visited,a:hover {
@@ -75,7 +74,7 @@ a:link,a:visited,a:hover {
 a:hover {
   color: purple;
   background-color: transparent;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 abbr[title] {
@@ -516,15 +515,6 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #ababab
-}
-
-a {
-    color: #1e6bb8;
-    text-decoration: none
-}
-
-a:hover {
-    text-decoration: underline
 }
 
 .btn {
