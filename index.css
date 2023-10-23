@@ -18,7 +18,7 @@ selector {
     background-color: rgba(0, 0, 0, 0.4);
 }
 .special {
-    background: url("https://wallpapers.com/images/hd/night-anime-aesthetic-city-nrel1vvg6lhn8fzb.jpg")no-repeat;
+    background: url("./images/command.jpg")no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat; no-repeat;
@@ -27,7 +27,7 @@ selector {
 }
 
 .command {
-    background: url("https://wallpapercave.com/wp/wp5264738.jpg")no-repeat;
+    background: url("./images/command.jpg")no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat; no-repeat;
@@ -36,7 +36,7 @@ selector {
 }
 
 .normal {
-    background: url("https://naniwallpaper.com/files/wallpapers/anime-night/14-anime%20night-1080x1920.jpg")no-repeat;
+    background: url("./images/command.jpg")no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat; no-repeat;
