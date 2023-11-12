@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Text - MaidKouciana.kou'</title>
+    <title>ガイド - メイドKouciana.コウ</title>
     <meta property="og:image" content="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-    <meta content="A Discord Bot made by Kouciana with multiple functions. Currently redirects to the Text Commands page." property="og:description">
-    <meta name="author" content="kou' (kouciana)">
+    <meta content="コウが作った多機能ディスコードボット。現在はコマンドページにリダイレクトされます。" property="og:description">
+    <meta name="author" content="コウ">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#CBC3E3">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -234,80 +234,31 @@
     details > p {
         margin: 5;
     }
-    </style>
+</style>
 </head>
-<body class="special">
+<body class="command">
 <main id="content" class="main-content" role="main">
     <div class="form-box">
         <br>
-        <p><a href="jp">Go to Japanese Version 日本語版に行く</a></p>
-        <a href=".." class="btn sl">Go Back</a>
-        <a href="https://bit.ly/maidkouciana" class="btn">Invite Bot</a>
-        <a href="https://discord.gg/tEcEGxugKt" class="btn">Discord Server</a>
+        <p><a href="..">Go to English Version 英語版に行く</a></p>
+        <a href="../../jp" class="btn sl">ホーム</a>
+        <a href="https://bit.ly/maidkouciana" class="btn">ロボットを招待する</a>
+        <a href="https://discord.gg/tEcEGxugKt" class="btn">サーバーに参加する</a>
         <br>
-        <h2 style="color: white;"><b>MaidKouciana Documentation</b></h2>
-        <h1 style="color: white;">Text Commands</h1>
-        <p>Text Commands Documentation Version <code>2.2</code></p>
+    <h1 style="color: white;"><b>メイドKoucianaドキュメント</b></h1>
+        <p>テキストコマンド ドキュメントバージョン <code>2.2</code><br>スラッシュコマンド ドキュメントバージョン <code>2.2.2</code></p>
         <br>
-        <h2 style="color: orange">Prefixes and Arguments</h2>
-        <p>Text Commands Prefix: <code>mk.</code><br>Required Arguments: <code>&lt;&gt;</code> Optional Arguments: <code>[<>]</code></p>
-        <h2 style="color: orange">Must-Know Commands</h2>
-        <p>List of all Categories: <code>mk.help</code><br>Help within a Category: <code>mk.help.&lt;category name&gt;</code></p>
-        <h2 style="color: orange">Graph</h2>
-        <table>
-            <thread>
-                <tr>
-                    <th>Categories</th>
-                    <th>Description</th>
-                    <th>Commands</th>
-                </tr>
-            </thread>
-            <tr>
-                <td><a href="#general">General</a></td>
-                <td>A general section with no categories</td>
-                <td>help, cake, 8, temp, yesorno, rps</td>
-            </tr>
-            <tr>
-                <td><a href="#interaction">Interaction</a></td>
-                <td>Express what you want to do</td>
-                <td>hug, kiss</td>
-            </tr>
-            <tr>
-                <td><a href="#splatoon">Splatoon 2 & 3</a></td>
-                <td>Check the stages for those games</td>
-                <td>Check if yourself down below</td>
-            </tr>
-        </table>
-        <h2 id="general" style="color: orange;">General</h2>
-        <p><code>mk.help</code> Global Help Command</p>
-        <p><code>mk.cake</code> Gives you a cake</p>
-        <p><code>mk.yesorno</code> Returns either yes or no</p>
-        <br>
-        <p><code>mk.8.ratio</code> Ratio the Eightball</p>
-        <p><code>mk.8.&lt;question&gt;</code> Ask the Eightball a question</p>
-        <br>
-        <p><code>mk.temp.&lt;number&gt;&lt;c/f/k&gt;</code> Convert Temperature</p>
-        <br>
-        <p><code>mk.rps.&lt;rock/paper/scissors&gt;</code> Play RPS with the bot</p>
-        <h2 id="interaction" style="color: orange;">Interaction</h2>
-        <p><code>mk.i.hug &lt;@user&gt;</code> Give someone a hug</p>
-        <p><code>mk.i.kiss &lt;@user&gt;</code> Kiss someone</p>
-        <h2 id="splatoon" style="color: orange;">Splatoon 2 & 3</h2>
-        <p><code><a style="color: red;">mk.2.</a></code> Check current Splatoon 2 rotations</p>
-        <p><code>mk.2.r</code> Splatoon 2 Turf War rotations</p>
-        <p><code>mk.2.a</code> Splatoon 2 Ranked Battle rotations</p>
-        <p><code>mk.2.l</code> Splatoon 2 League Battle rotations</p>
-        <p><code>mk.2.s</code> Current Splatoon 2 Salmon Run rotation</p>
-        <p><code><a style="color: red;">mk.3.</a></code> Check current Splatoon 3 rotations</p>
-        <p><code>mk.3.r</code> Splatoon 3 Turf War rotations</p>
-        <p><code>mk.3.a</code> Splatoon 3 Anarchy Battle rotations</p>
-        <p><code>mk.3.s</code> Splatoon 3 Salmon Run rotation</p>
-        <p><code>mk.3.x</code> Splatoon 3 X Battle rotations</p>
-        <p><code>mk.3.x.&lt;region&gt;</code> Check a region's top X power people</p>
-        <p><code>mk.3.map("&lt;Map Name&gt;", "&lt;Gamemode&gt;", "&lt;Map/Top&gt;")</code> Check map properties and image</p>
-        <p><code>mk.3.map.howto</code> Help for command above</p>
-        <br><br>
-        <span class="site-footer-owner">MaidKouciana is maintained by <a href="https://github.com/Kouciana">Kouciana</a>.</span>
+        <h2 style="color: orange">ページ</h2>
+        <a href="../text/jp" class="btn">テキストコマンド</a>
+        <a href="../slash/jp" class="btn">スラッシュコマンド</a>
+        <h2 style="color: orange">前置詞と引数</h2>
+        <p>テキストコマンドの接頭辞： <code>mk.</code><br>スラッシュコマンドの接頭辞： <code>/</code></p>
+        <p><br>必須の引数： <code>&lt;&gt;</code><br>オプションの引数： <code>[<>]</code></p>
+        <h2 style="color: orange">必須コマンド</h2>
+        <p>すべてのカテゴリのリスト： <code>mk.help</code><br>カテゴリー内のヘルプ： <code>mk.&lt;カテゴリ名&gt;.</code></p>
+        <p>すべてのカテゴリのリスト： <code>/help</code><br>カテゴリー内のヘルプ： <code>/help &lt;カテゴリ名&gt;</code></p>
+    <br><br>
+        <span class="site-footer-owner">メイドKoucianaは<a href="https://github.com/Kouciana">コウ</a>によって管理されている。</span>
     </div>
 </main>
 </body>
