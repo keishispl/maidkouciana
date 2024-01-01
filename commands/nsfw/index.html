@@ -2,15 +2,15 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>テキストコマンド - メイドKouciana.コウ</title>
+    <title>NSFW - MaidKouciana</title>
     <meta property="og:image" content="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-    <meta content="コウが作った多機能ディスコードボット。現在はテキストコマンドのページにリダイレクトされます。" property="og:description">
-    <meta name="author" content="コウ">
+    <meta content="A Discord Bot made by Kacey with multiple functions. Currently redirects to the Slash Commands NSFW page." property="og:description">
+    <meta name="author" content="Kacey">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#CBC3E3">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" href="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-    <link rel="stylesheet" href="../../../index.css">
+    <link rel="stylesheet" href="../../index.css">
     <style>
         .btn.sl
 
@@ -240,74 +240,51 @@
 <main id="content" class="main-content" role="main">
     <div class="form-box">
         <br>
-        <p><a href="..">Go to English Version 英語版に行く</a></p>
-        <a href="../../jp" class="btn sl">もどる</a>
-        <a href="https://bit.ly/maidkouciana" class="btn">ロボットを招待する</a>
-        <a href="https://discord.gg/tEcEGxugKt" class="btn">サーバーに参加する</a>
+        <a href=".." class="btn sl">Back</a>
+        <a href="https://bit.ly/maidkouciana" class="btn">Invite</a>
+        <a href="https://discord.gg/tEcEGxugKt" class="btn">Discord</a>
         <br>
-        <h1 style="color: white;"><b>メイドKoucianaドキュメント</b></h1>
-        <h1 style="color: white;">テキストコマンド</h1>
-        <p>テキストコマンド ドキュメントバージョン <code>2.2</code></p>
-        <br>
-        <h2 style="color: orange">前置詞と引数</h2>
-        <p>テキストコマンドの接頭辞： <code>mk.</code><br>必須の引数： <code>&lt;&gt;</code> オプションの引数： <code>[<>]</code></p>
-        <h2 style="color: orange">必須コマンド</h2>
-        <p>すべてのカテゴリのリスト： <code>mk.help</code><br>カテゴリー内のヘルプ： <code>mk.&lt;カテゴリ名&gt;.</code></p>
-        <h2 style="color: orange">グラフ</h2>
+        <h2 style="color: white;"><b>MaidKouciana Documentation</b></h2>
+        <h1 style="color: white;">Slash Commands</h1>
+        <h2 style="color: red;">NSFW Section</h2>
+        <p>⚠️ In the NSFW section below will contain adult content, you are responsible for reading them. ⚠️</p>
+        <p>⚠️ Any user under 18 is not prohibited. ⚠️</p>
+        <h2>Prefixes and Arguments</h2>
+        <p>Prefix: <code>/</code><br>Required Arguments: <code>&lt;&gt;</code><br>Optional Arguments: <code>[<>]</code></p>
+        <h2>Graph</h2>
         <table>
             <thread>
                 <tr>
-                    <th>カテゴリー</th>
-                    <th>説明</th>
-                    <th>コマンド</th>
+                    <th>Categories</th>
+                    <th>Description</th>
+                    <th>Options</th>
                 </tr>
             </thread>
             <tr>
-                <td><a href="#general">一般</a></td>
-                <td>カテゴリーのない<br>一般的なセクション</td>
-                <td>help, cake, 8, temp, yesorno, rps</td>
-            </tr>
-            <tr>
-                <td><a href="#interaction">インタラクション</a></td>
-                <td>やりたいことを表現する</td>
-                <td>hug, kiss</td>
-            </tr>
-            <tr>
-                <td><a href="#splatoon">スプラトゥーン 2 & 3</a></td>
-                <td>これらのゲームやその他のステージ<br>をチェックする</td>
-                <td>以下よりご確認ください。</td>
+                <td><a href="#nsfw">NSFW</a></td>
+                <td>No underaged users, adult content warning</td>
+                <td>assgrab, blowjob, boobsgrab, creampie, cum, dickride, footjob, fuck, handjob, pussyeat, spank, strip</td>
             </tr>
         </table>
-        <h2 id="general" style="color: orange;">一般</h2>
-        <p><code>mk.help</code> グローバルヘルプコマンド</p>
-        <p><code>mk.cake</code> ケーキを贈る</p>
-        <p><code>mk.yesorno</code> 「はい」または「いいえ」を返す</p>
-        <br>
-        <p><code>mk.8.ratio</code> エイトボールの比率</p>
-        <p><code>mk.8.&lt;問題&gt;</code> エイトボールに質問する</p>
-        <br>
-        <p><code>mk.temp.&lt;番号&gt;&lt;せっし/法悦/ケルビン&gt;</code> 温度を変換する</p>
-        <br>
-        <p><code>mk.rps.&lt;石/紙/はさみ&gt;</code> ボットとジャンケンをする</p>
-        <h2 id="interaction" style="color: orange;">インタラクション</h2>
-        <p><code>mk.i.hug &lt;@user&gt;</code> 誰かにハグをする</p>
-        <p><code>mk.i.kiss &lt;@user&gt;</code> キスをする</p>
-        <h2 id="splatoon" style="color: orange;">スプラトゥーン 2 & 3</h2>
-        <p><code><a style="color: red;">mk.2.</a></code> 現在のスプラトゥーンをチェック 2回転</p>
-        <p><code>mk.2.r</code> スプラトゥーン2 ターフウォーのローテーション</p>
-        <p><code>mk.2.a</code> スプラトゥーン2 ランクバトルのローテーション</p>
-        <p><code>mk.2.l</code> スプラトゥーン2 リーグ戦のローテーション</p>
-        <p><code>mk.2.s</code> 現在のスプラトゥーン2 サーモンランのローテーション</p>
-        <p><code><a style="color: red;">mk.3.</a></code> 現在のスプラトゥーンをチェック 3回転</p>
-        <p><code>mk.3.r</code> スプラトゥーン3 ターフウォーのローテーション</p>
-        <p><code>mk.3.a</code> スプラトゥーン3 アナーキーバトルのローテーション</p>
-        <p><code>mk.3.s</code> スプラトゥーン3 サーモンランのローテーション</p>
-        <p><code>mk.3.x</code> スプラトゥーン3 Xバトルのローテーション</p>
-        <p><code>mk.3.x.&lt;地域&gt;</code> 地域のトップXパワーをチェック</p>
-        <p><code>mk.3.map("&lt;マップ名&gt;", "&lt;ゲームモード&gt;", "&lt;マップ/トップ&gt;")</code> マップのプロパティと画像をチェック</p>
-        <p><code>mk.3.map.howto</code> 上記コマンドのヘルプ</p>
+        <h2 style="color: orange;" id="#nsfw">⚠️ NSFW Commands</h2>
+        <p>In the NSFW section below will contain adult content, you are responsible for reading them.</p>
         <br><br>
-        <span class="site-footer-owner">メイドKoucianaは<a href="https://github.com/Kouciana">コウ</a>によって管理されている。</span>
+        <h2 style="color: red;">⚠️You have been warned. ⚠️</h2><br>
+        <h2 style="color: white">The whole NSFW command section fall under 1 command: <code>/nsfw</code><br>Here are the options below:</h2>
+        <p><code>assgrab [&lt;@user&gt;]</code> Grab someone's ass</p>
+        <p><code>blowjob [&lt;@user&gt;]</code> Blowjob someone</p>
+        <p><code>boobsgrab [&lt;@user&gt;]</code> Grab someone's boobs</p>
+        <p><code>creampie [&lt;@user&gt;]</code> Creampie someone</p>
+        <p><code>cum [&lt;@user&gt;]</code> Cum on someone</p>
+        <p><code>dickride [&lt;@user&gt;]</code> Ride someone's dick</p>
+        <p><code>footjob [&lt;@user&gt;]</code> Footjob someone</p>
+        <p><code>fuck [&lt;@user&gt;]</code> Fuck someone</p>
+        <p><code>handjob [&lt;@user&gt;]</code> Handjob someone</p>
+        <p><code>pussyeat [&lt;@user&gt;]</code> Eat someone's pussy</p>
+        <p><code>spank [&lt;@user&gt;]</code> Spank someone</p>
+        <p><code>strip [&lt;@user&gt;]</code> Strip someone naked</p>
+        <br><br>
+        <span class="site-footer-owner">Made by <a href="https://github.com/Kouciana">Kacey</a></span>
     </div>
 </main>
 </body>
