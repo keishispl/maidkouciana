@@ -1,266 +1,71 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<title>Home - MaidKouciana</title>
-    <meta property="og:image" content="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-<meta content="A Discord Bot made by Kacey with multiple functions. Currently redirects to the Home page." property="og:description">
-<meta name="author" content="Kacey">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#CBC3E3">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="icon" href="https://cdn.discordapp.com/avatars/1083094452790374465/af2b7dc400b730307fb1e5d620be56cc.webp">
-<link rel="stylesheet" href="index.css">
-<style>
-.btn.sl
+<title>MaidKouciana v2</title>
+    <meta content="MaidKouciana v2" property="og:title" />
 
-{
--webkit-animation: rainbow-text 7s infinite alternate;
-animation: rainbow-text 7s infinite alternate;
-}
-@keyframes rainbow-text {
-0% {
-color: #e87d7d;
-border-color: #e87d7d;
-}
-2% {
-color: #e88a7d;
-border-color: #e88a7d;
-}
-4% {
-color: #e8977d;
-border-color: #e8977d;
-}
-6% {
-color: #e8a47d;
-border-color: #e8a47d;
-}
-8% {
-color: #e8b07d;
-border-color: #e8b07d;
-}
-10% {
-color: #e8bd7d;
-border-color: #e8bd7d;
-}
-12% {
-color: #e8ca7d;
-border-color: #e8ca7d;
-}
-14% {
-color: #e8d77d;
-border-color: #e8d77d;
-}
-16% {
-color: #e8e47d;
-border-color: #e8e47d;
-}
-18% {
-color: #dfe87d;
-border-color: #dfe87d;
-}
-20% {
-color: #d3e87d;
-border-color: #d3e87d;
-}
-22% {
-color: #c6e87d;
-border-color: #c6e87d;
-}
-24% {
-color: #b9e87d;
-border-color: #b9e87d;
-}
-26% {
-color: #ace87d;
-border-color: #ace87d;
-}
-28% {
-color: #9fe87d;
-border-color: #9fe87d;
-}
-30% {
-color: #92e87d;
-border-color: #92e87d;
-}
-32% {
-color: #86e87d;
-border-color: #86e87d;
-}
-34% {
-color: #7de881;
-border-color: #7de881;
-}
-36% {
-color: #7de88e;
-border-color: #7de88e;
-}
-38% {
-color: #7de89b;
-border-color: #7de89b;
-}
-40% {
-color: #7de8a8;
-border-color: #7de8a8;
-}
-42% {
-color: #7de8b5;
-border-color: #7de8b5;
-}
-44% {
-color: #7de8c1;
-border-color: #7de8c1;
-}
-46% {
-color: #7de8ce;
-border-color: #7de8ce;
-}
-48% {
-color: #7de8db; 
-border-color: #7de8db;
-}
-50% {
-color: #7de8e8;
-border-color: #7de8e8;
-}
-52% {
-color: #7ddbe8;
-border-color: #7ddbe8;
-}
-54% {
-color: #7dcee8;
-border-color: #7dcee8;
-}
-56% {
-color: #7dc1e8;
-border-color: #7dc1e8;
-}
-58% {
-color: #7db5e8;
-border-color: #7db5e8;
-}
-60% {
-color: #7da8e8;
-border-color: #7da8e8;
-}
-62% {
-color: #7d9be8;
-border-color: #7d9be8;
-}
-64% {
-color: #7d8ee8;
-border-color: #7d8ee8;
-}
-66% {
-color: #7d81e8;
-border-color: #7d81e8;
-}
-68% {
-color: #867de8;
-border-color: #867de8;
-}
-70% {
-color: #927de8;
-border-color: #927de8;
-}
-72% {
-color: #9f7de8;
-border-color: #9f7de8;
-}
-74% {
-color: #ac7de8;
-border-color: #ac7de8;
-}
-76% {
-color: #b97de8;
-border-color: #b97de8;
-}
-78% {
-color: #c67de8;
-border-color: #c67de8;
-}
-80% {
-color: #d37de8;
-border-color: #d37de8;
-}
-82% {
-color: #df7de8;
-border-color: #df7de8;
-}
-84% {
-color: #e87de4;
-border-color: #e87de4;
-}
-86% {
-color: #e87dd7;
-border-color: #e87dd7;
-}
-88% {
-color: #e87dca;
-border-color: #e87dca;
-}
-90% {
-color: #e87dbd;
-border-color: #e87dbd;
-}
-92% {
-color: #e87db0;
-border-color: #e87db0;
-}
-94% {
-color: #e87da4;
-border-color: #e87da4;
-}
-96% {
-color: #e87d97;
-border-color: #e87d97;
-}
-98% {
-color: #e87d8a;
-border-color: #e87d8a;
-}
-100% {
-color: #e87d7d;
-border-color: #e87d7d;
-}
-}
+    <meta content="avatar.png" property="og:image">
+    <meta content="image/png" property="og:image:type">
+    <meta content="The Discord Bot's Avatar" property="og:image:alt">
+    <link rel="icon" href="avatar.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="avatar.png">
+
+    <meta content="A discord bot made by Kacey, currently under heavy construction and rewrite. Sorry for the inconvenience!" property="og:description">
+    <meta content="A discord bot made by Kacey, currently under heavy construction and rewrite. Sorry for the inconvenience!" name="description">
+    <meta name="author" content="keishispl">
+    <meta property="og:site_name" content="keishispl">
+    <link rel="canonical" href="https://keishispl.github.io/">
+    <meta property="og:url" content="https://keishispl.github.io/">
+
+    <meta name="theme-color" content="#a134eb">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="revisit-after" content="2 days">
+    <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="index.css">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        align-items: center;
+    }
+    a.select,.selected {
+        text-decoration: none;
+        font-size: 16px;
+        padding: 5px 15px;
+        text-align: center;
+    }
+    li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 </style>
 </head>
 <body class="normal">
+<div class="navigation-container">
+    <ul>
+        <li><a class="selected">Home</a></li>
+        <li><a class="select">Slash Cmds</a></li>
+        <li><a class="select">Legacy Cmds</a></li>
+        <li><a class="select" href="https://bit.ly/maidkouciana" target="_blank">Invite Bot</a></li>
+    </ul>
+</div>
+<div style="margin-top: 60px;">
 <main id="content" class="main-content" role="main">
-    <div class="form-box">
-    <br>
-<a href="../en" class="btn sl">Card</a>
-<a href="https://bit.ly/maidkouciana" class="btn">Invite</a>
-<a href="https://discord.gg/tEcEGxugKt" class="btn">Discord</a>
-<br>
 <h1 style="color: white;"><b>MaidKouciana Wiki</b></h1>
 <br>
-<h2 style="color: orange;">Pages</h2>
-        <a href="commands" class="btn">Slash Commands</a>
-        <a href="legacy" class="btn">Legacy Commands</a>
-    <br>
-        <br>
-<h2 id="about-me" style="color: orange;">About Me</h2>
-<p>Hello! My name is MaidKouciana.<br>I have many different <a href="commands">commands</a> and I can help express your emotions and your horny deeds!</p>
-<p>How to use my <a href="commands">commands</a>? You may ask. It's simple!<br>Either you use <code>/help &lt;category name&gt;</code> or use <code>mk.help</code> if you're NOT using slash commands!<br>(Notice: Only some slash commands made it into the non slash command section)</p>
-    <br>
-        <br>
-<h2 id="htf" style="color: orange;">How to fix?</h2>
-<p>By default, MaidKouciana brings the necessary permissions to operate smoothly on the server.<br>In case you do not have these permissions, you can add them in a role or within the channel where the bot will be used: <code>ATTACH_FILES</code></p>
-<h2 id="faq" style="color: orange;">Frequently Asked Questions</h2>
-<p><code>Q:</code><b style="color: white;"> How do I get the bot onto my server?</b><br><code>A:</code> It's quite easy actually! Click <a href="https://bit.ly/maidkouciana" target="_blank">here</a> to invite the bot to your server!</p>
-<p><code>Q:</code><b style="color: white;"> How do I use the bot?</b><br><code>A:</code> You can either use slash commands: <code>/</code> or use non<br>slash commands: <code>mk.</code> and more information will be found at <a href="commands">commands</a>!</p>
-<p><code>Q:</code><b style="color: white;"> How do I use NSFW commands on my server?</b><br><code>A:</code> For NSFW <a href="commands">commands</a> to work, you must be in a NSFW channel.<br>Ask one of the administrators of your server to create one!</p>
-<br>
-        <br>
-<h2 style="color: orange;" id="further-more-information">Further More Information</h2>
-<p>To add a bot to a server, in that server you must have the <u>Manage Server</u> permission.<br>Without it, you cannot add any bots to the server.</p>
-<p>Also, if you have any more questions, you could always join the <a href="https://discord.gg/tEcEGxugKt" target="_blank">Support Server</a> and we will help you!</p>
-<br>
-<span class="site-footer-owner">Made by <a href="https://github.com/Kouciana">Kacey</a></span>
-    </div>
-</footer>
+<h2 style="color: orange;">Current Situation</h2>
+    <p>Currently, the bot is under heavy construction and rewrite, so you wouldn't be able to use it for a while.</p>
+    <p>Sorry for the inconvenience!</p>
+<div class="toppadding"></div>
+<span class="site-footer-owner">Made by <a href="https://github.com/keishispl">keishispl</a></span>
 </main>
 </div>
 </body>

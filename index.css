@@ -3,6 +3,19 @@
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+.selected {
+    color: rgb(57, 50, 166);
+}
+.select:hover {
+    color: rgb(114, 50, 166);
+}
+.select {
+    color: red;
+}
+.selected:hover {
+    color: rgb(57, 50, 166);
+}
+
 selector {
     color: value;
 }
@@ -35,31 +48,98 @@ selector {
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.4);
 }
-.special {
-    background: url("./images/command.jpg")no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-repeat; no-repeat;
-    background-attachment: fixed;
-    margin: 0
-}
-
-.command {
-    background: url("./images/command.jpg")no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-repeat; no-repeat;
-    background-attachment: fixed;
-    margin: 0
-}
-
 .normal {
-    background: url("./images/command.jpg")no-repeat;
+    background: url("background.jpg")no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat; no-repeat;
     background-attachment: fixed;
     margin: 0
+}
+.navigation-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+p.mid2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+p.mid2::before,
+p.mid2::after {
+  background-color: white;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+p.mid {
+  overflow: hidden;
+  text-align: center;
+}
+
+p.mid::before,
+p.mid::after {
+  background-color: gray;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 25%;
+}
+
+p.mid::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+p.mid::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+p.mid2 {
+  overflow: hidden;
+  text-align: center;
+  padding: 250px 0px 250px 0px;
+}
+.nompadding {
+  padding: 500px 0px 0px 0px;
+}
+.toppadding {
+  padding: 275px 0px 0px 0px;
+}
+p.mid2::before,
+p.mid2::after {
+  background-color: white;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 30%;
+}
+p.mid2::before {
+  margin-left: -50%;
+}
+
+p.mid2::after {
+  margin-right: -50%;
+}
+.leftcentered {
+    text-align: center;
+}
+.leftcentered2 {
+    display: inline-block;
+    text-align: left;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
