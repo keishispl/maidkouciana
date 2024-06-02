@@ -78,11 +78,18 @@ selector {
     background-color: rgba(0, 0, 0, 0.4);
 }
 .normal {
-    background: url("background.jpg")no-repeat;
+    background: url("background.jpg")no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    z-index: -10;
     background-position: center;
     background-repeat: no-repeat;
+    display: block;
     background-attachment: fixed;
+    left: 0;
+    top: 0;
     margin: 0;
     width: 100%;
     height: 100%;
