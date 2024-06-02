@@ -1,14 +1,16 @@
 # MaidKouciana
 
-This github page will be a website for the discord bot MaidKouciana.
+This github page is a website for the discord bot MaidKouciana.
 
-This is a discord with multiple types of commands: Fun commands, interactions, reactions, utilities and splatoon 2/3 commands
+# Current Situation
+
+Currently, the bot is under heavy construction and rewrite, so you wouldn't be able to use it for a while.
+
+Sorry for the inconvenience!
 
 # Links
 
 Invite the bot: https://bit.ly/maidkouciana/
-
-Join support server: https://discord.gg/tEcEGxugKt/
 
 # Credit
 
