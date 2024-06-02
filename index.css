@@ -40,6 +40,9 @@ p {
     text-decoration: none;
     white-space: nowrap;
 }
+.button:link, .button:visited, .button:active {
+    color: rgb(190, 190, 190);
+}
 .button:hover {
     color: rgb(190, 190, 190);
     background-color: rgba(255, 255, 255, 0.1);
