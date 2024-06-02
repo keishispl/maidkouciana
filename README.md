@@ -10,6 +10,7 @@ Sorry for the inconvenience!
 
 # Links
 
+Open source code: https://github.com/keishispl/maidkoucianabot/
 Invite the bot: https://bit.ly/maidkouciana/
 
 # Credit
