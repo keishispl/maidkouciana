@@ -69,16 +69,6 @@ selector {
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
 }
-.form-box {
-    position: relative;
-    background: transparent;
-    justify-content: top;
-    align-items: center;
-    text-align: center;
-    border: 2px solid rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
-}
 .normal {
     background: url("background.jpg")no-repeat center center;
     -webkit-background-size: cover;
@@ -97,6 +87,9 @@ selector {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
+}
+.darker {
+    background-color: rgba(0, 0, 0, 0.33);
 }
 .navigation-container {
     overflow: hidden;
@@ -163,7 +156,10 @@ p.mid2 {
   padding: 275px 0px 0px 0px;
 }
 .smolpadding {
-  padding: 150px 0px 0px 0px;
+    padding: 150px 0px 0px 0px;
+}
+.tinypadding {
+    padding: 50px 0px 0px 0px;
 }
 p.mid2::before,
 p.mid2::after {
@@ -373,282 +369,6 @@ td,th {
     padding: 0
 }
 
-.highlight table td {
-    padding: 5px
-}
-
-.highlight table pre {
-    margin: 0
-}
-
-.highlight .cm {
-    color: #998;
-    font-style: italic
-}
-
-.highlight .cp {
-    color: #999;
-    font-weight: 700
-}
-
-.highlight .c1 {
-    color: #998;
-    font-style: italic
-}
-
-.highlight .cs {
-    color: #999;
-    font-weight: 700;
-    font-style: italic
-}
-
-.highlight .c,.highlight .cd {
-    color: #998;
-    font-style: italic
-}
-
-.highlight .err {
-    color: #a61717;
-    background-color: #e3d2d2
-}
-
-.highlight .gd {
-    color: #000;
-    background-color: #fdd
-}
-
-.highlight .ge {
-    color: #000;
-    font-style: italic
-}
-
-.highlight .gr {
-    color: #a00
-}
-
-.highlight .gh {
-    color: #999
-}
-
-.highlight .gi {
-    color: #000;
-    background-color: #dfd
-}
-
-.highlight .go {
-    color: #888
-}
-
-.highlight .gp {
-    color: #555
-}
-
-.highlight .gs {
-    font-weight: 700
-}
-
-.highlight .gu {
-    color: #aaa
-}
-
-.highlight .gt {
-    color: #a00
-}
-
-.highlight .kc {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .kd {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .kn {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .kp {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .kr {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .kt {
-    color: #458;
-    font-weight: 700
-}
-
-.highlight .k,.highlight .kv {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .mf {
-    color: #099
-}
-
-.highlight .mh {
-    color: #099
-}
-
-.highlight .il {
-    color: #099
-}
-
-.highlight .mi {
-    color: #099
-}
-
-.highlight .mo {
-    color: #099
-}
-
-.highlight .m,.highlight .mb,.highlight .mx {
-    color: #099
-}
-
-.highlight .sb {
-    color: #d14
-}
-
-.highlight .sc {
-    color: #d14
-}
-
-.highlight .sd {
-    color: #d14
-}
-
-.highlight .s2 {
-    color: #d14
-}
-
-.highlight .se {
-    color: #d14
-}
-
-.highlight .sh {
-    color: #d14
-}
-
-.highlight .si {
-    color: #d14
-}
-
-.highlight .sx {
-    color: #d14
-}
-
-.highlight .sr {
-    color: #009926
-}
-
-.highlight .s1 {
-    color: #d14
-}
-
-.highlight .ss {
-    color: #990073
-}
-
-.highlight .s {
-    color: #d14
-}
-
-.highlight .na {
-    color: teal
-}
-
-.highlight .bp {
-    color: #999
-}
-
-.highlight .nb {
-    color: #0086b3
-}
-
-.highlight .nc {
-    color: #458;
-    font-weight: 700
-}
-
-.highlight .no {
-    color: teal
-}
-
-.highlight .nd {
-    color: #3c5d5d;
-    font-weight: 700
-}
-
-.highlight .ni {
-    color: purple
-}
-
-.highlight .ne {
-    color: #900;
-    font-weight: 700
-}
-
-.highlight .nf {
-    color: #900;
-    font-weight: 700
-}
-
-.highlight .nl {
-    color: #900;
-    font-weight: 700
-}
-
-.highlight .nn {
-    color: #555
-}
-
-.highlight .nt {
-    color: navy
-}
-
-.highlight .vc {
-    color: teal
-}
-
-.highlight .vg {
-    color: teal
-}
-
-.highlight .vi {
-    color: teal
-}
-
-.highlight .nv {
-    color: teal
-}
-
-.highlight .ow {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .o {
-    color: #000;
-    font-weight: 700
-}
-
-.highlight .w {
-    color: #bbb
-}
-
-.highlight {
-    background-color: #f8f8f8
-}
-
 * {
     box-sizing: border-box
 }
@@ -710,77 +430,6 @@ body {
     .btn+.btn {
         margin-top: 1rem;
         margin-left: 0
-    }
-}
-
-.page-header {
-    color: #fff;
-    text-align: center;
-    background-image: url("https://wallpapercave.com/wp/wp2394336.jpg");
-}
-
-@media screen and (min-width: 64em) {
-    .page-header {
-        padding:5rem 6rem
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width:64em) {
-    .page-header {
-        padding:3rem 4rem
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .page-header {
-        padding:2rem 1rem
-    }
-}
-
-.project-name {
-    margin-top: 0;
-    margin-bottom: .1rem
-}
-
-@media screen and (min-width: 64em) {
-    .project-name {
-        font-size:3.25rem
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width:64em) {
-    .project-name {
-        font-size:2.25rem
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .project-name {
-        font-size:1.75rem
-    }
-}
-
-.project-tagline {
-    margin-bottom: 2rem;
-    font-weight: 400;
-    opacity: .7
-}
-
-@media screen and (min-width: 64em) {
-    .project-tagline {
-        font-size:1.25rem
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width:64em) {
-    .project-tagline {
-        font-size:1.15rem
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .project-tagline {
-        font-size:1rem
     }
 }
 
@@ -956,35 +605,55 @@ body {
     border: 0
 }
 
-.site-footer {
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-top: solid 1px #eff0f1
-}
-
-@media screen and (min-width: 64em) {
-    .site-footer {
-        font-size:1rem
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width:64em) {
-    .site-footer {
-        font-size:1rem
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .site-footer {
-        font-size:.9rem
-    }
-}
-
 .site-footer-owner {
     display: block;
     font-weight: 700
 }
 
-.site-footer-credits {
-    color: #819198
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center;
+}
+
+a.select,
+.selected {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.style-command,
+.style-command:hover {
+    color: rgb(83, 161, 245);
+}
+
+.style-aliases,
+.style-aliases:hover,
+.style-category,
+.style-category:hover {
+    color: rgb(110, 245, 83);
+}
+
+.style-subcommand,
+.style-subcommand:hover {
+    color: rgb(227, 169, 69);
+}
+
+.style-input,
+.style-input:hover {
+    color: rgb(227, 69, 69);
+}
+
+.style-oinput,
+.style-oinput:hover {
+    color: rgb(214, 69, 227);
 }
