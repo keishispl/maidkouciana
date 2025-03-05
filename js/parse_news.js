@@ -3,6 +3,7 @@ function parseNews(array) {
      var date = array.date.split(".");
      var date2 = new Date(parseInt(date[0]), parseInt(date[1])-1, parseInt(date[2]));
      var dateNow = Date.now();
+     console.log("Current Date: " + dateNow)
 
      if (date2 < dateNow) {
 
