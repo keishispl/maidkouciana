@@ -5,5 +5,3 @@ function jsonFromFile() {
      request.send(null)
      return JSON.parse(request.responseText);
 }
-
-jsonFromFile().forEach((item) => parseNews(item));
