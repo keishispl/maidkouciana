@@ -15,6 +15,31 @@
 p {
     color: rgb(190, 190, 190);
 }
+#news {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.news {
+    background-color: transparent;
+    border: 1px solid rgb(190, 190, 190);
+}
+.news:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.news_title {
+    padding-top: 5px;
+    margin-left: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.news_date {
+    margin-left: 25px;
+    margin-top: -30px;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
 .button {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
