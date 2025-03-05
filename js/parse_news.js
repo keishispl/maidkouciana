@@ -16,7 +16,7 @@ function parseNews(array) {
           newsDiv.appendChild(div);
 
           div.addEventListener('click', () => {
-               window.location.href = "../news/" + `${date[0]}_${date[1]}_${date[2]}.html`;
+               window.location.href = "./news/" + `${date[0]}_${date[1]}_${date[2]}.html`;
           });
 
           Object.keys(array).forEach((key) => {
