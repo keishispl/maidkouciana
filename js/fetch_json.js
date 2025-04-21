@@ -1,7 +1,11 @@
 // Get JSON file and parse
-function jsonFromFile() {
+function jsonFromFile(path) {
      var request = new XMLHttpRequest();
-     request.open("GET", `news.json`, false);
+     if (window.location.pathname.startsWith("/maidkouciana")) {
+          request.open("GET", `${window.location.origin}/maidkouciana/${path}.json`, false);
+     } else {
+          request.open("GET", `${window.location.origin}/${path}.json`, false);
+     }
      request.send(null)
      return JSON.parse(request.responseText);
 }

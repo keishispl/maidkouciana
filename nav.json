@@ -1,0 +1,14 @@
+[
+     {
+          "name": "Home",
+          "path": "/"
+     },
+     {
+          "name": "Commands",
+          "path": "/commands/"
+     },
+     {
+          "name": "Invite Bot",
+          "disabled": true
+     }
+]

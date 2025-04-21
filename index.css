@@ -12,21 +12,35 @@
 .select {
     color: rgb(255, 0, 0);
 }
+.selectdisabled:hover {
+    color: rgb(150, 150, 150);
+}
+.selectdisabled {
+    color: rgb(125, 125, 125);
+}
 p {
     color: rgb(190, 190, 190);
 }
 #news {
-    border: 1px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
 
 .news {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
     background-color: transparent;
-    border: 1px solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
 }
 .news:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
+    color: rgb(190, 190, 190);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .news_title {
     padding-top: 5px;
@@ -61,7 +75,6 @@ p {
     text-decoration: none;
     white-space: nowrap;
     backdrop-filter: blur(10px);
-    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 .button:link, .button:visited, .button:active {
@@ -95,7 +108,7 @@ selector {
   background: #888;
 }
 .normal {
-    background: url("background.jpg")no-repeat center center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://keishispl.github.io/img/wallpaper/self_drawn.png');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -113,18 +126,15 @@ selector {
     max-width: 100%;
     max-height: 100%;
 }
-.darker {
-    background-color: rgba(0, 0, 0, 0.33);
-}
 .navigation-container {
     overflow: hidden;
     position: fixed;
     top: 0px;
     z-index: 1;
     width: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-    border: 2px solid rgba(255, 255, 255, 0.18);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -643,7 +653,8 @@ ul {
 }
 
 a.select,
-.selected {
+a.selected,
+a.selectdisabled {
     text-decoration: none;
     font-size: 16px;
     padding: 5px 15px;
