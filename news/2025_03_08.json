@@ -1,0 +1,25 @@
+{
+     "components": [
+          {
+               "components": [
+                    {
+                         "type": "image",
+                         "link": "2025_03_08-header.png",
+                         "style": "border: 1px solid white; border-radius: 5px; max-height: 400px;",
+                         "padding": true
+                    }
+               ],
+               "padding": false,
+               "br": true
+          },
+          {
+               "title": "Happy Birthday!",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "It's that time of the year again - this time, its the 3rd anniversary of MaidKouciana! Rest in peace to the 1st and 2nd anniversaries.<br>Enjoy the image above and to celebrate the birthday of MaidKouciana."
+                    }
+               ]
+          }
+     ]
+}

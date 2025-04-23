@@ -1,5 +1,6 @@
 function parseNews(array) {
 
+     // Check if the date is not in the future
      var date = array.date.split(".");
      var date2 = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
      var dateNow = Date.now();
@@ -16,7 +17,7 @@ function parseNews(array) {
           newsDiv.appendChild(div);
 
           div.addEventListener('click', () => {
-               window.location.href = "./news/" + `${date[0]}_${date[1]}_${date[2]}.html`;
+               window.location.href = `./news/?date=${array.date}`;
           });
 
           Object.keys(array).forEach((key) => {
@@ -39,4 +40,6 @@ function parseNews(array) {
      }
 };
 
-jsonFromFile("news").forEach((item) => parseNews(item));
+setTimeout(() => {
+     jsonFromFile("news").forEach((item) => parseNews(item));
+}, 250);

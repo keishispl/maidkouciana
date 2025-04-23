@@ -1,0 +1,22 @@
+{
+     "components": [
+          {
+               "title": "The New News Column (Difficult to say)",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "Do you see this? You probably saw on the main page as well! It's a new update to the website - the news column."
+                    }
+               ]
+          },
+          {
+               "title": "What is the News Column?",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "The News Column is for news regarding MaidKouciana (Crazy, I know), and also about this wiki website."
+                    }
+               ]
+          }
+     ]
+}
