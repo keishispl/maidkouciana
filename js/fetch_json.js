@@ -5,7 +5,7 @@ function jsonFromFile(path) {
           request.open("GET", `${window.location.origin}/maidkouciana/data/${path}.json`, false);
      } else {
           request.open("GET", `${window.location.origin}/data/${path}.json`, false);
-     }
-     request.send(null)
+     };
+     request.send(null);
      return JSON.parse(request.responseText);
-}
+};

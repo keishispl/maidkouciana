@@ -22,9 +22,9 @@ function parseNav(component) {
                a.href = window.location.origin + "/maidkouciana" + component.path;
           } else {
                a.href = window.location.origin + component.path;
-          }
+          };
           a.classList.add("select");
-     }
+     };
 
      // Add elements to HTML page
      navDiv.appendChild(li);

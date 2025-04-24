@@ -9,7 +9,7 @@ function parseNews(array) {
 
           // Sub-DIV for each JSON data element
           const newsDiv = document.getElementById("news");
-          const div = document.createElement("div")
+          const div = document.createElement("div");
 
           div.setAttribute("id", "news_" + array.date);
           div.setAttribute("class", "news");
@@ -35,9 +35,9 @@ function parseNews(array) {
                     case "date":
                          para.setAttribute("class", `news_date`);
                          break;
-               }
+               };
           });
-     }
+     };
 };
 
 setTimeout(() => {
