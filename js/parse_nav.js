@@ -26,6 +26,8 @@ function parseNav(component) {
           a.classList.add("select");
      };
 
+     a.draggable = false;
+
      // Add elements to HTML page
      navDiv.appendChild(li);
      li.appendChild(a);

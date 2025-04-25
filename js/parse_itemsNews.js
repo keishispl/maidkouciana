@@ -84,7 +84,7 @@ function parseItems(item, bigDiv) {
      };
      if (count > 0 && item.padding !== false) {
           const padding = document.createElement("div");
-          padding.classList.add("smolpadding");
+          padding.classList.add("tinypadding2");
           div.appendChild(padding);
      };
 };

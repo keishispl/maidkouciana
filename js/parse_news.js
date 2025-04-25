@@ -16,9 +16,10 @@ function parseNews(array) {
 
           newsDiv.appendChild(div);
 
-          div.addEventListener('click', () => {
-               window.location.href = `./news/?date=${array.date}`;
-          });
+          const href = document.createElement("a");
+          href.classList.add("cover-link");
+          href.href = `./news/?date=${array.date}`;
+          div.appendChild(href);
 
           Object.keys(array).forEach((key) => {
 
