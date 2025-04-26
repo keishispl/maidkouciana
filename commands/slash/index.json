@@ -1,0 +1,374 @@
+{
+     "title": "Slash Commands",
+     "description": false,
+     "components": [
+          {
+               "title": "Colour Codes",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "The commands in this page will be colour coded for easier understanding, here's a demonstration:"
+                    },
+                    {
+                         "type": "text",
+                         "text": "/<a class=\"style-command\">splatoon3</a> <a class=\"style-category\">schedule</a> <a class=\"style-subcommand\">normal</a>"
+                    },
+                    {
+                         "type": "text",
+                         "text": "/<a class=\"style-command\">rng</a> <a class=\"style-input\">[0] [5]</a> <a class=\"style-oinput\">(2)</a>",
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "text",
+                                   "text": ">> Prefix"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": ">> <a class=\"style-command\">Initial Command</a>"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": ">> <a class=\"style-category\">Subcommand Category</a>"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": ">> <a class=\"style-subcommand\">Subcommand</a>"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": ">> <a class=\"style-input\">Required Input</a>"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": ">> <a class=\"style-oinput\">Optional Input</a>"
+                              }
+                         ],
+                         "padding": false
+                    },
+                    {
+                         "type": "text",
+                         "text": "Once you understand the colour codes, feel free to check out the commands below!"
+                    }
+               ]
+          },
+          {
+               "title": "Command List",
+               "components": [
+                    {
+                         "type": "table",
+                         "name": [
+                              "Name",
+                              "Description",
+                              "Category"
+                         ],
+                         "group": [
+                              [
+                                   "Splatoon 3",
+                                   "Get the map rotations for Splatoon 3",
+                                   "N/A"
+                              ],
+                              [
+                                   "Eightball",
+                                   "Ask the bot a question, or commit ratio",
+                                   "Fun"
+                              ],
+                              [
+                                   "Gethelp",
+                                   "Get some advice, or get insulted",
+                                   "Fun"
+                              ],
+                              [
+                                   "RPS",
+                                   "Play Rock Paper Scissors against MaidKouciana",
+                                   "Fun"
+                              ],
+                              [
+                                   "KaciCode",
+                                   "Convert text into KaciCode, or back",
+                                   "Misc"
+                              ],
+                              [
+                                   "Ping",
+                                   "Check out how the bot is doing",
+                                   "Misc"
+                              ],
+                              [
+                                   "RNG",
+                                   "Random number between 2 numbers",
+                                   "Misc"
+                              ],
+                              [
+                                   "Temperature",
+                                   "Convert temperature into other scales",
+                                   "Misc"
+                              ]
+                         ]
+                    }
+               ]
+          },
+          {
+               "title": "Uncategorized Commands",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "&nbsp;"
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">splatoon3</a> <a class=\"style-category\">schedule</a> <a class=\"style-subcommand\">normal</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Get the map rotations for Splatoon 3"
+                                        }
+                                   ],
+                                   "padding": false
+                              },
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">splatoon3</a> <a class=\"style-category\">schedule</a> <a class=\"style-subcommand\">salmonrun</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Get the Salmon Run rotations for Splatoon 3"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false
+                    }
+               ]
+          },
+          {
+               "title": "Fun Commands",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "&nbsp;"
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">eightball</a> <a class=\"style-subcommand\">ask</a> <a class=\"style-input\">[question]</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Ask the eightball a question. You may rely on it, but we are not accountable for any consequences"
+                                        }
+                                   ],
+                                   "padding": false
+                              },
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">eightball</a> <a class=\"style-subcommand\">ratio</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Let the eightball decide on ratio or not. We are not accountable for any friends lost during the process"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">gethelp</a> <a class=\"style-subcommand\">advice</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Let the bot give you an advice. You may rely on it, but we are not accountable for any consequences"
+                                        }
+                                   ],
+                                   "padding": false
+                              },
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">gethelp</a> <a class=\"style-subcommand\">insult</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Let the bot insult you. We are not accountable for any consequences, such as getting depression"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">rps</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Play Rock Paper Scissors with MaidKouciana. If you lose, skill issue"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false
+                    }
+               ]
+          },
+          {
+               "title": "Misc Commands",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "&nbsp;"
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">kacicode</a> <a class=\"style-subcommand\">translate</a> <a class=\"style-input\">[text|kacicode]</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Convert text to KaciCode or the other way around"
+                                        }
+                                   ],
+                                   "padding": false
+                              },
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">kacicode</a> <a class=\"style-subcommand\">charlist</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Get the KaciCode character list"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">ping</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Check if the bot is doing fine or not :)"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">rng</a> <a class=\"style-input\">[min number] [max number]</a> <a class=\"style-oinput\">(decimal places)</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Get a random number between a range of 2 numbers, up to 8 decimal places are supported"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "div",
+                                   "components": [
+                                        {
+                                             "type": "text",
+                                             "text": "/<a class=\"style-command\">temperature</a> <a class=\"style-input\">[number] [scale]</a>",
+                                             "style": "font-weight: bold;"
+                                        },
+                                        {
+                                             "type": "text",
+                                             "text": "Convert temperature into other measurement scales"
+                                        }
+                                   ],
+                                   "padding": false
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    }
+               ]
+          }
+     ]
+}

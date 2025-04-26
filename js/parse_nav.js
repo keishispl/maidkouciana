@@ -1,7 +1,6 @@
-function parseNav(component) {
+function parseNav(component, navDiv) {
 
      // Get elements and create new elements
-     const navDiv = document.getElementById("navdiv");
      const li = document.createElement("li");
      const a = document.createElement("a");
 
@@ -33,4 +32,9 @@ function parseNav(component) {
      li.appendChild(a);
 };
 
-jsonFromFile("nav").forEach((item) => parseNav(item));
+const container = document.getElementsByClassName("navigation-container")[0];
+const navDiv = document.createElement("ul");
+navDiv.setAttribute("id", "navdiv");
+container.appendChild(navDiv);
+
+jsonFromFile("nav").forEach((item) => parseNav(item, navDiv));

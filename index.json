@@ -1,0 +1,51 @@
+{
+     "title": "",
+     "description": "",
+     "components": [
+          {
+               "title": "Important Notice",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "<b>2025.04.22</b> - MaidKouciana's source code is no longer open-sourced."
+                    },
+                    {
+                         "type": "text",
+                         "text": "<b>2025.04.09</b> - MaidKouciana is discontinued. The bot is no longer maintained but may still receive updates. The bot will not be online other than for testing purposes (and for fun)."
+                    }
+               ]
+          },
+          {
+               "title": "Pages",
+               "components": [
+                    {
+                         "type": "button",
+                         "text": "Commands Guide",
+                         "link": "commands",
+                         "br": true
+                    },
+                    {
+                         "type": "button",
+                         "text": "Slash Commands",
+                         "link": "commands/slash",
+                         "br": true
+                    },
+                    {
+                         "type": "button",
+                         "text": "Text Commands",
+                         "link": "commands/text"
+                    }
+               ]
+          },
+          {
+               "title": "News",
+               "components": [
+                    {
+                         "type": "div",
+                         "id": "news",
+                         "components": []
+                    }
+               ]
+          }
+     ]
+}

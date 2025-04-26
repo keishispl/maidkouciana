@@ -24,100 +24,17 @@
     <meta name="revisit-after" content="2 days">
     <meta property="og:locale" content="en_US">
     <link rel="stylesheet" href="../index.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            align-items: center;
-        }
-
-        a.select,
-        .selected {
-            text-decoration: none;
-            font-size: 16px;
-            padding: 5px 15px;
-            text-align: center;
-        }
-
-        li {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body class="normal">
     <div class="darker">
-        <div class="navigation-container">
-            <ul id="navdiv"></ul>
-        </div>
-        <div style="margin-top: 60px;">
-            <main id="content" class="main-content" role="main">
-                <h1 style="color: white;"><b>Commands</b></h1>
-                <p style="margin-top: -20px; color: rgb(220, 220, 220);">MaidKouciana v2 Wiki</p>
-                <br>
-                <div>
-                    <h2 style="color: orange;">Basic Overview</h2>
-                    <p>This page will be explaining how to use commands of the bot - both slash and Text Commands.</p>
-                    <p>If you wish to view all commands, please look below.</p>
-                </div>
-                <div>
-                    <div class="tinypadding"></div>
-                    <h2 style="color: orange;">Pages</h2>
-                    <a class="button" href="slash">Slash Commands</a>
-                    <br>
-                    <a class="button" href="text">Text Commands</a>
-                </div>
-                <div>
-                    <div class="tinypadding"></div>
-                    <h2 style="color: orange;">Formatting - Text Commands</h2>
-                    <p>The prefix for all MaidKouciana Text Commands is <a style="color:red;">mk.</a></p>
-                    <br>
-                    <p><b>e.g.</b> mk.rng<a style="color:red;">/</a>0,5</p>
-                    <p>Used for writing inputs - like string, or numbers</p>
-                    <p style="color: rgb(0, 186, 0)">// The 0 and 5 here is used for the command RNG, which is used to
-                        get a random number between 2 numbers, so this will show a number between 0 and 5.</p>
-                    <br>
-                    <p><b>e.g.</b> mk.8b<a style="color:red;">.</a>ratio</p>
-                    <p>Used for seperating commands into subcommands</p>
-                    <p style="color: rgb(0, 186, 0)">// The command is originally used for eightball, but as we added
-                        the .ratio, the command will be used for the eightball ratio feature.</p>
-                    <br>
-                    <h2 style="color: orange;">Formatting - Slash Commands</h2>
-                    <p>The prefix for all slash commands is <a style="color:red;">/</a></p>
-                    <br>
-                    <p><b>e.g.</b> /rng <a style="color:red;">[0] [5]</a></p>
-                    <p>Used for writing inputs - like string, or numbers, this input is required for the command to run
-                    </p>
-                    <p style="color: rgb(0, 186, 0)">// The 0 and 5 here is used for the command RNG, which is used to
-                        get a random number between 2 numbers, so this will show a number between 0 and 5.</p>
-                    <br>
-                    <p><b>e.g.</b> /rng [0] [5] <a style="color:red;">(2)</a></p>
-                    <p>Used for writing inputs - like string, or numbers, this input is optional, unlike the one above
-                    </p>
-                    <p style="color: rgb(0, 186, 0)">// The 2 here is used for the command RNG, which is used to get a
-                        random number between 2 numbers, and in this case it's used to get a random number with 2
-                        decimal places.</p>
-                    <br>
-                    <p><b>e.g.</b> /eightball <a style="color:red;">ratio</a></p>
-                    <p>Used for seperating commands into subcommands</p>
-                    <p style="color: rgb(0, 186, 0)">// The command is originally used for eightball, but as we added
-                        the " ratio", the command will be used for the eightball ratio feature.</p>
-                </div>
-                <div class="smolpadding"></div>
-            </main>
-        </div>
+        <div class="navigation-container"></div>
+        <div id="content" class="main-content"></div>
     </div>
 
     <script src="../js/fetch_json.js"></script>
     <script src="../js/parse_nav.js"></script>
+    <script src="../js/parse_items.js"></script>
 </body>
 
 </html>

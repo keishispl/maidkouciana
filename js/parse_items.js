@@ -12,7 +12,7 @@ function parseItems(item, bigDiv) {
 
      if (item.title) {
           const title = document.createElement("h2");
-          if (item.id) { item.setAttribute("id", item.id) }
+          if (item.id) { item.setAttribute("id", item.id) };
 
           title.style.color = "orange";
           title.innerHTML = item.title;
@@ -51,7 +51,7 @@ function parseItems(item, bigDiv) {
                     div.appendChild(obj);
                };
                count++;
-          };
+          }
           if (component.type === "button") {
                const obj = document.createElement("a");
                if (component.style) { obj.setAttribute("style", component.style) };
@@ -66,8 +66,39 @@ function parseItems(item, bigDiv) {
                div.appendChild(obj);
                count++;
           };
+          if (component.type === "table") {
+               const obj = document.createElement("table");
+               if (component.style) { obj.setAttribute("style", component.style) };
+               if (component.class) { obj.setAttribute("class", component.class) };
+               if (component.id) { obj.setAttribute("id", component.id) };
+
+               div.appendChild(obj);
+
+
+               const objTitle = document.createElement("tr");
+               obj.appendChild(objTitle);
+               component.name.forEach((name) => {
+                    const objTitle2 = document.createElement("th");
+                    objTitle2.innerHTML = name;
+                    objTitle.appendChild(objTitle2);
+               });
+
+               
+               component.group.forEach((item) => {
+                    const objText = document.createElement("tr");
+                    obj.appendChild(objText);
+
+                    item.forEach((text) => {
+                         const objText2 = document.createElement("td");
+                         objText2.innerHTML = text;
+                         objText.appendChild(objText2);
+                    });
+               });
+               
+               count++;
+          };
           if (component.type === "div") {
-               parseItemsNews(component, div);
+               parseItems(component, div);
                count++;
           };
 
@@ -89,54 +120,46 @@ function parseItems(item, bigDiv) {
      };
 };
 
-function parseTitle(item, object, bigDiv) {
+function parseTitle(item, bigDiv) {
      const title = document.createElement("h1");
      title.style.color = "white";
      title.style.fontWeight = "bold";
 
-     title.innerHTML = object.title;
+     title.innerHTML = item.title;
+     document.title = `${item.title} - MaidKouciana v${version} Wiki`;
      bigDiv.appendChild(title);
 
 
      const description = document.createElement("p");
      description.setAttribute("style", "margin-top: -20px; color: rgb(220, 220, 220);");
 
-     description.innerHTML = object.date;
+     if (item.description === false) {
+          description.innerHTML = `MaidKouciana v${version} Wiki`;
+     } else {
+          description.innerHTML = item.description;
+          if (`${description.innerHTML}` === "") {
+               description.innerHTML = "&nbsp;";
+               title.innerHTML = `MaidKouciana v${version} Wiki`;
+               document.title = `MaidKouciana v${version} Wiki`;
+          };
+     };
      bigDiv.appendChild(description);
+
 
 
      const br = document.createElement("br");
      bigDiv.appendChild(br);
 
-
      item.components.forEach((component) => {
-          parseItems(component, bigDiv)
+          parseItems(component, bigDiv);
      });
 };
 
-const urlParam = new URLSearchParams(window.location.search).get('date');
-
-var object = [];
-
 // Get JSON file and parse
-jsonFromFile("news").forEach((item) => {
-     if (item.date === urlParam) {
-          object = item;
-          return;
-     };
-});
-
-if (object.length === 0) {
-     window.location.href = `../#news`;
-};
-
-document.title = object.title + ` - MaidKouciana v${version} News`;
-var date = object.date.split(".");
-
 var request = new XMLHttpRequest();
-request.open("GET", `${date[0]}_${date[1]}_${date[2]}.json`, false);
+request.open("GET", `index.json`, false);
 request.send(null);
 const items = JSON.parse(request.responseText);
 const mainDiv = document.getElementById("content");
 mainDiv.style.paddingTop = "100px";
-parseTitle(items, object, mainDiv);
+parseTitle(items, mainDiv);

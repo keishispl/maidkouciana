@@ -1,0 +1,155 @@
+{
+     "title": "Commands",
+     "description": false,
+     "components": [
+          {
+               "title": "Basic Overview",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "This page will be explaining how to use commands of the bot - both Slash & Text Commands."
+                    },
+                    {
+                         "type": "text",
+                         "text": "If you wish to view all commands, please look below in the pages section."
+                    }
+               ]
+          },
+          {
+               "title": "Pages",
+               "components": [
+                    {
+                         "type": "button",
+                         "text": "Slash Commands",
+                         "link": "slash",
+                         "br": true
+                    },
+                    {
+                         "type": "button",
+                         "text": "Text Commands",
+                         "link": "text"
+                    }
+               ]
+          },
+          {
+               "title": "Formatting - Text Commands",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "The prefix for all MaidKouciana Text Commands is <a style=\"color:red;\">mk.</a>",
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "text",
+                                   "text": "<b>e.g.</b> mk.rng<a style=\"color:red;\">/</a>0,5"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "Used for writing inputs - like string, or numbers"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "// The 0 and 5 here is used for the command RNG, which is used to get a random number between 2 numbers, so this will show a number between 0 and 5.",
+                                   "color": "rgb(0, 186, 0)"
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "text",
+                                   "text": "<b>e.g.</b> mk.8b<a style=\"color:red;\">.</a>ratio"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "Used for seperating commands into subcommands"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "// The command is originally used for eightball, but because we added .ratio at the end, the command will be used for the eightball ratio feature instead.",
+                                   "color": "rgb(0, 186, 0)"
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    }
+               ],
+               "padding": false,
+               "br": true
+          },
+          {
+               "title": "Formatting - Slash Commands",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "The prefix for all Slash Commands is <a style=\"color:red;\">/</a>",
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "text",
+                                   "text": "<b>e.g.</b> /rng <a style=\"color:red;\">[0] [5]</a>"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "Used for writing inputs - like string, or numbers, this input is required for the command to run"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "// The 0 and 5 here is used for the command RNG, which is used to get a random number between 2 numbers, so this will show a number between 0 and 5.",
+                                   "color": "rgb(0, 186, 0)"
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "text",
+                                   "text": "<b>e.g.</b> /rng [0] [5] <a style=\"color:red;\">(2)</a>"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "Used for writing inputs - like string, or numbers, this input is optional, unlike the one above"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "// The 2 here is used for the command RNG, which is used to get a random number between 2 numbers, and in this case this will show a number between 0 and 5 that has 2 decimal places.",
+                                   "color": "rgb(0, 186, 0)"
+                              }
+                         ],
+                         "padding": false,
+                         "br": true
+                    },
+                    {
+                         "type": "div",
+                         "components": [
+                              {
+                                   "type": "text",
+                                   "text": "<b>e.g.</b> /eightball <a style=\"color:red;\">ratio</a>"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "Used for seperating commands into subcommands"
+                              },
+                              {
+                                   "type": "text",
+                                   "text": "// The command is originally used for eightball, but because we added \" ratio\" at the end, the command will be used for the eightball ratio feature instead.",
+                                   "color": "rgb(0, 186, 0)"
+                              }
+                         ]
+                    }
+               ]
+          }
+     ]
+}
