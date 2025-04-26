@@ -83,7 +83,7 @@ function parseItems(item, bigDiv) {
                     objTitle.appendChild(objTitle2);
                });
 
-               
+
                component.group.forEach((item) => {
                     const objText = document.createElement("tr");
                     obj.appendChild(objText);
@@ -94,7 +94,7 @@ function parseItems(item, bigDiv) {
                          objText.appendChild(objText2);
                     });
                });
-               
+
                count++;
           };
           if (component.type === "div") {
@@ -113,35 +113,44 @@ function parseItems(item, bigDiv) {
           const br = document.createElement("br");
           div.appendChild(br);
      };
-     if (count > 0 && item.padding !== false) {
+     if ((count > 0 && item.padding !== false) || item.padding === true) {
           const padding = document.createElement("div");
           padding.classList.add("tinypadding2");
           div.appendChild(padding);
      };
 };
 
-function parseTitle(item, bigDiv) {
+function parseTitle(item, bigDiv, object) {
      const title = document.createElement("h1");
      title.style.color = "white";
      title.style.fontWeight = "bold";
 
-     title.innerHTML = item.title;
-     document.title = `${item.title} - MaidKouciana v${version} Wiki`;
+     if (object.title === false) {
+          title.innerHTML = item.title;
+          document.title = item.title + ` - MaidKouciana v${version} Wiki`;
+     } else {
+          title.innerHTML = object.title;
+          document.title = object.title + ` - MaidKouciana v${version} News`;
+     };
      bigDiv.appendChild(title);
 
 
      const description = document.createElement("p");
      description.setAttribute("style", "margin-top: -20px; color: rgb(220, 220, 220); padding-bottom: 20px;");
 
-     if (item.description === false) {
-          description.innerHTML = `MaidKouciana v${version} Wiki`;
-     } else {
-          description.innerHTML = item.description;
-          if (`${description.innerHTML}` === "") {
-               description.innerHTML = "&nbsp;";
-               title.innerHTML = `MaidKouciana v${version} Wiki`;
-               document.title = `MaidKouciana v${version} Wiki`;
+     if (object.date === false) {
+          if (item.description === false) {
+               description.innerHTML = `MaidKouciana v${version} Wiki`;
+          } else {
+               description.innerHTML = item.description;
+               if (`${description.innerHTML}` === "") {
+                    description.innerHTML = "&nbsp;";
+                    title.innerHTML = `MaidKouciana v${version} Wiki`;
+                    document.title = `MaidKouciana v${version} Wiki`;
+               };
           };
+     } else {
+          description.innerHTML = object.date;
      };
      bigDiv.appendChild(description);
 
@@ -150,11 +159,39 @@ function parseTitle(item, bigDiv) {
      });
 };
 
-// Get JSON file and parse
-var request = new XMLHttpRequest();
-request.open("GET", `index.json`, false);
-request.send(null);
-const items = JSON.parse(request.responseText);
 const mainDiv = document.getElementById("content");
 mainDiv.style.paddingTop = "100px";
-parseTitle(items, mainDiv);
+
+var request = new XMLHttpRequest();
+
+function checkIfNews(window) {
+     var object = {
+          link: "index.json",
+          item: {
+               title: false,
+               date: false
+          }
+     };
+     
+     if (window.location.pathname === "/news/" || window.location.pathname === "/maidkouciana/news/") {
+          const urlParam = new URLSearchParams(window.location.search).get('date');
+          jsonFromFile("news").forEach((item) => {
+               if (item.date === urlParam) {
+                    object.item = item;
+                    return;
+               };
+          });
+
+          if (object.length === 0) { window.location.href = `../#news` };
+
+          var date = object.item.date.split(".");
+          object.link = `${date[0]}_${date[1]}_${date[2]}.json`;
+     };
+     return object;
+};
+var object = checkIfNews(window);
+
+request.open("GET", object.link, false);
+request.send(null);
+
+parseTitle(JSON.parse(request.responseText), mainDiv, object.item);
