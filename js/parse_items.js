@@ -131,7 +131,7 @@ function parseTitle(item, bigDiv) {
 
 
      const description = document.createElement("p");
-     description.setAttribute("style", "margin-top: -20px; color: rgb(220, 220, 220);");
+     description.setAttribute("style", "margin-top: -20px; color: rgb(220, 220, 220); padding-bottom: 20px;");
 
      if (item.description === false) {
           description.innerHTML = `MaidKouciana v${version} Wiki`;
@@ -144,11 +144,6 @@ function parseTitle(item, bigDiv) {
           };
      };
      bigDiv.appendChild(description);
-
-
-
-     const br = document.createElement("br");
-     bigDiv.appendChild(br);
 
      item.components.forEach((component) => {
           parseItems(component, bigDiv);
