@@ -1,0 +1,26 @@
+{
+     "components": [
+          {
+               "title": "Github Repository",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "As of the 22nd of April 2025, MaidKouciana's repository has been marked as private. This means that the repository is no longer publicly accessible, this decision was made as a result of the recent events surrounding the project."
+                    }
+               ]
+          },
+          {
+               "title": "Discontinuation",
+               "components": [
+                    {
+                         "type": "text",
+                         "text": "On the 9th of April 2025, due to lack of interest and unability to maintain the bot, MaidKouciana was announced to be discontinued. The bot will no longer be maintained but may receive updates in the future, and it will only be online for testing purposes (and for fun)."
+                    },
+                    {
+                         "type": "text",
+                         "text": "MaidKouciana will also not be avaliable to be invited to servers, only the creator (keishispl) can do so. Thank you for your continuous support for the past 2 years, perharps one day MaidKouciana will be back if a hosting site was found."
+                    }
+               ]
+          }
+     ]
+}

@@ -182,7 +182,13 @@ function checkIfNews(window) {
                };
           });
 
-          if (object.length === 0) { window.location.href = `../#news` };
+          if (object.item.date === false) { window.location.href = `../#news` };
+
+          var date = object.item.date.split(".");
+          var date2 = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
+          var dateNow = Date.now();
+     
+          if (date2 > dateNow) { window.location.href = `../#news` };
 
           var date = object.item.date.split(".");
           object.link = `${date[0]}_${date[1]}_${date[2]}.json`;
