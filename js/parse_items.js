@@ -1,202 +1,206 @@
+/**
+ * Fetches the JSON data from a file.
+ * @param {string} filename - The name of the file to fetch data from.
+ * @returns {Object} - The parsed JSON object.
+ */
 const version = jsonFromFile("version");
 
-function parseItems(item, bigDiv) {
-     const div = document.createElement("div");
-     if (item.style) { div.setAttribute("style", item.style) };
-     if (item.class) { div.setAttribute("class", item.class) };
-     if (item.id) { div.setAttribute("id", item.id) };
+/**
+ * Creates and sets attributes for a specified element type.
+ * @param {string} elementType - The type of element to create.
+ * @param {Object} attributes - The attributes to set on the element.
+ * @returns {HTMLElement} - The created element with set attributes.
+ */
+function createAndSetAttributes(elementType, attributes) {
+    const element = document.createElement(elementType);
+    Object.keys(attributes).forEach(attr => {
+        if (attributes[attr]) {
+            element.setAttribute(attr, attributes[attr]);
+        }
+    });
+    return element;
+}
 
-     bigDiv.appendChild(div);
+/**
+ * Appends padding to the parent div if needed based on the component's padding property.
+ * @param {HTMLElement} parentDiv - The parent div to append padding to.
+ * @param {number} count - The current count of appended child elements.
+ * @param {Object} item - The item containing padding information.
+ */
+function appendPaddingIfNeeded(parentDiv, count, item) {
+    if ((count > 0 && item.padding !== false) || item.padding === true) {
+        const paddingDiv = document.createElement("div");
+        paddingDiv.classList.add("tinypadding2");
+        parentDiv.appendChild(paddingDiv);
+    }
+}
 
-     var count = 0;
+/**
+ * Parses and appends items to the parent div.
+ * @param {Object} item - The item to parse.
+ * @param {HTMLElement} parentDiv - The parent div to append items to.
+ */
+function parseItems(item, parentDiv) {
+    const div = createAndSetAttributes("div", { style: item.style, class: item.class, id: item.id });
+    parentDiv.appendChild(div);
 
-     if (item.title) {
-          const title = document.createElement("h2");
-          if (item.id) { item.setAttribute("id", item.id) };
+    let count = 0;
 
-          title.style.color = "orange";
-          title.innerHTML = item.title;
+    if (item.title) {
+        const title = createAndSetAttributes("h2", { id: item.id });
+        title.style.color = "orange";
+        title.innerHTML = item.title;
+        div.appendChild(title);
+        count++;
+    }
 
-          div.appendChild(title);
-          count++;
-     };
+    item.components.forEach(component => {
+        const commonAttributes = { style: component.style, class: component.class, id: component.id };
+        let element;
 
-     item.components.forEach((component) => {
-          if (component.type === "text") {
-               const obj = document.createElement("p");
-               if (component.style) { obj.setAttribute("style", component.style) };
-               if (component.class) { obj.setAttribute("class", component.class) };
-               if (component.id) { obj.setAttribute("id", component.id) };
+        switch (component.type) {
+            case "text":
+                element = createAndSetAttributes("p", commonAttributes);
+                element.innerHTML = component.text || "";
+                if (component.color) {
+                    element.style.color = component.color;
+                }
+                break;
 
-               if (component.text) { obj.innerHTML = component.text };
-               if (component.color) { obj.style.color = component.color };
+            case "image":
+                element = createAndSetAttributes("img", commonAttributes);
+                element.src = component.link || "";
+                if (component.padding) {
+                    const paddingDiv = document.createElement("div");
+                    paddingDiv.style.paddingBottom = "50px";
+                    paddingDiv.appendChild(element);
+                    div.appendChild(paddingDiv);
+                } else {
+                    div.appendChild(element);
+                }
+                break;
 
-               div.appendChild(obj);
-               count++;
-          };
-          if (component.type === "image") {
-               const obj = document.createElement("img");
-               if (component.style) { obj.setAttribute("style", component.style) };
-               if (component.class) { obj.setAttribute("class", component.class) };
-               if (component.id) { obj.setAttribute("id", component.id) };
+            case "button":
+                element = createAndSetAttributes("a", commonAttributes);
+                element.classList.add("button");
+                element.innerHTML = component.text || "";
+                element.href = component.link || "#";
+                element.target = component.target || "";
+                break;
 
-               if (component.link) { obj.src = component.link };
+            case "table":
+                element = createAndSetAttributes("table", commonAttributes);
+                const headerRow = createAndSetAttributes("tr", {});
+                component.name.forEach(name => {
+                    const headerCell = createAndSetAttributes("th", {});
+                    headerCell.innerHTML = name;
+                    headerRow.appendChild(headerCell);
+                });
+                element.appendChild(headerRow);
 
-               if (component.padding === true) {
-                    const padding = document.createElement("div");
-                    padding.style.paddingBottom = "50px";
-                    div.appendChild(padding);
-                    padding.appendChild(obj);
-               } else {
-                    div.appendChild(obj);
-               };
-               count++;
-          }
-          if (component.type === "button") {
-               const obj = document.createElement("a");
-               if (component.style) { obj.setAttribute("style", component.style) };
-               if (component.class) { obj.setAttribute("class", component.class) };
-               if (component.id) { obj.setAttribute("id", component.id) };
-
-               obj.classList.add("button");
-               if (component.text) { obj.innerHTML = component.text };
-               if (component.link) { obj.href = component.link };
-               if (component.target) { obj.target = component.target };
-
-               div.appendChild(obj);
-               count++;
-          };
-          if (component.type === "table") {
-               const obj = document.createElement("table");
-               if (component.style) { obj.setAttribute("style", component.style) };
-               if (component.class) { obj.setAttribute("class", component.class) };
-               if (component.id) { obj.setAttribute("id", component.id) };
-
-               div.appendChild(obj);
-
-
-               const objTitle = document.createElement("tr");
-               obj.appendChild(objTitle);
-               component.name.forEach((name) => {
-                    const objTitle2 = document.createElement("th");
-                    objTitle2.innerHTML = name;
-                    objTitle.appendChild(objTitle2);
-               });
-
-
-               component.group.forEach((item) => {
-                    const objText = document.createElement("tr");
-                    obj.appendChild(objText);
-
-                    item.forEach((text) => {
-                         const objText2 = document.createElement("td");
-                         objText2.innerHTML = text;
-                         objText.appendChild(objText2);
+                component.group.forEach(group => {
+                    const row = createAndSetAttributes("tr", {});
+                    group.forEach(text => {
+                        const cell = createAndSetAttributes("td", {});
+                        cell.innerHTML = text;
+                        row.appendChild(cell);
                     });
-               });
+                    element.appendChild(row);
+                });
+                break;
 
-               count++;
-          };
-          if (component.type === "div") {
-               parseItems(component, div);
-               count++;
-          };
+            case "div":
+                parseItems(component, div);
+                break;
+        }
 
-          if (component.br) {
-               const br = document.createElement("br");
-               div.appendChild(br);
-          };
-     });
+        if (element) {
+            div.appendChild(element);
+            count++;
+        }
 
+        if (component.br) {
+            const br = document.createElement("br");
+            div.appendChild(br);
+        }
+    });
 
-     if (item.br) {
-          const br = document.createElement("br");
-          div.appendChild(br);
-     };
-     if ((count > 0 && item.padding !== false) || item.padding === true) {
-          const padding = document.createElement("div");
-          padding.classList.add("tinypadding2");
-          div.appendChild(padding);
-     };
-};
+    if (item.br) {
+        const br = document.createElement("br");
+        div.appendChild(br);
+    }
 
-function parseTitle(item, bigDiv, object) {
-     const title = document.createElement("h1");
-     title.style.color = "white";
-     title.style.fontWeight = "bold";
+    appendPaddingIfNeeded(div, count, item);
+}
 
-     if (object.title === false) {
-          title.innerHTML = item.title;
-          document.title = item.title + ` - MaidKouciana v${version} Wiki`;
-     } else {
-          title.innerHTML = object.title;
-          document.title = object.title + ` - MaidKouciana v${version} News`;
-     };
-     bigDiv.appendChild(title);
+/**
+ * Parses and appends the title and description to the parent div.
+ * @param {Object} item - The item containing the title and description.
+ * @param {HTMLElement} parentDiv - The parent div to append title and description to.
+ * @param {Object} object - The object containing title information.
+ */
+function parseTitle(item, parentDiv, object) {
+    const title = createAndSetAttributes("h1", {});
+    title.style.color = "white";
+    title.style.fontWeight = "bold";
+    title.innerHTML = object.title === false ? item.title : object.title;
+    title.innerHTML = title.innerHTML === "" ? `MaidKouciana v${version} Wiki` : title.innerHTML;
+    document.title = `${title.innerHTML} - MaidKouciana v${version} ${object.title === false ? "Wiki" : "News"}`;
+    document.title = document.title === `${title.innerHTML} - ${title.innerHTML}` ? title.innerHTML : document.title;
+    parentDiv.appendChild(title);
 
+    const description = createAndSetAttributes("p", { style: "margin-top: -20px; color: rgb(220, 220, 220); padding-bottom: 20px;" });
+    if (object.date === false) {
+        description.innerHTML = item.description === false ? `MaidKouciana v${version} Wiki` : item.description || "&nbsp;";
+    } else {
+        description.innerHTML = object.date;
+    }
+    parentDiv.appendChild(description);
 
-     const description = document.createElement("p");
-     description.setAttribute("style", "margin-top: -20px; color: rgb(220, 220, 220); padding-bottom: 20px;");
+    item.components.forEach(component => {
+        parseItems(component, parentDiv);
+    });
+}
 
-     if (object.date === false) {
-          if (item.description === false) {
-               description.innerHTML = `MaidKouciana v${version} Wiki`;
-          } else {
-               description.innerHTML = item.description;
-               if (`${description.innerHTML}` === "") {
-                    description.innerHTML = "&nbsp;";
-                    title.innerHTML = `MaidKouciana v${version} Wiki`;
-                    document.title = `MaidKouciana v${version} Wiki`;
-               };
-          };
-     } else {
-          description.innerHTML = object.date;
-     };
-     bigDiv.appendChild(description);
-
-     item.components.forEach((component) => {
-          parseItems(component, bigDiv);
-     });
-};
-
+// Set main div styling and padding
 const mainDiv = document.getElementById("content");
 mainDiv.style.paddingTop = "100px";
 
-var request = new XMLHttpRequest();
-
+/**
+ * Checks if the current page is a news page and returns the relevant object.
+ * @param {Window} window - The window object to check the location.
+ * @returns {Object} - The object containing link and item information.
+ */
 function checkIfNews(window) {
-     var object = {
-          link: "index.json",
-          item: {
-               title: false,
-               date: false
-          }
-     };
-     
-     if (window.location.pathname === "/news/" || window.location.pathname === "/maidkouciana/news/") {
-          const urlParam = new URLSearchParams(window.location.search).get('date');
-          jsonFromFile("news").forEach((item) => {
-               if (item.date === urlParam) {
-                    object.item = item;
-                    return;
-               };
-          });
+    const object = { link: "index.json", item: { title: false, date: false } };
 
-          if (object.item.date === false) { window.location.href = `../#news` };
+    if (window.location.pathname === "/news/" || window.location.pathname === "/maidkouciana/news/") {
+        const urlParam = new URLSearchParams(window.location.search).get('date');
+        jsonFromFile("news").forEach(item => {
+            if (item.date === urlParam) {
+                object.item = item;
+                return;
+            }
+        });
 
-          var date = object.item.date.split(".");
-          var date2 = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
-          var dateNow = Date.now();
-     
-          if (date2 > dateNow) { window.location.href = `../#news` };
+        if (!object.item.date) {
+            window.location.href = `../#news`;
+        } else {
+            const dateParts = object.item.date.split(".");
+            const itemDate = new Date(parseInt(dateParts[0]), parseInt(dateParts[1]) - 1, parseInt(dateParts[2]));
+            if (itemDate > Date.now()) {
+                window.location.href = `../#news`;
+            } else {
+                object.link = `${dateParts[0]}_${dateParts[1]}_${dateParts[2]}.json`;
+            }
+        }
+    }
+    return object;
+}
 
-          var date = object.item.date.split(".");
-          object.link = `${date[0]}_${date[1]}_${date[2]}.json`;
-     };
-     return object;
-};
-var object = checkIfNews(window);
-
+// Fetch and parse the JSON data for the title and content
+const request = new XMLHttpRequest();
+const object = checkIfNews(window);
 request.open("GET", object.link, false);
 request.send(null);
 

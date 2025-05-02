@@ -1,3 +1,8 @@
+/**
+ * Parse a single navigation item and append it to the given navDiv
+ * @param {Object} component - The object containing the link name and path
+ * @param {HTMLDivElement} navDiv - The div containing the navigation links
+ */
 function parseNav(component, navDiv) {
 
      // Get elements and create new elements
