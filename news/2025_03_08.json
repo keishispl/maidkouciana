@@ -5,12 +5,10 @@
                     {
                          "type": "image",
                          "link": "2025_03_08-header.png",
-                         "style": "border: 1px solid white; border-radius: 5px; max-height: 400px;",
-                         "padding": true
+                         "style": "border: 1px solid white; border-radius: 5px; max-height: 400px;"
                     }
                ],
-               "padding": false,
-               "br": true
+               "padding": true
           },
           {
                "title": "Happy Birthday!",
