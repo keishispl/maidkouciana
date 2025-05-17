@@ -9,26 +9,35 @@ function parseNav(component, navDiv) {
      const li = document.createElement("li");
      const a = document.createElement("a");
 
-     // Disabled links
      if (component.disabled) {
+          // Disabled links
           a.innerHTML = `<s>${component.name}</s>`;
           a.classList.add("selectdisabled");
 
-     // Check if link is current page
-     } else if (window.location.pathname === component.path || window.location.pathname === "/maidkouciana" + component.path) {
-          a.innerHTML = component.name;
-          a.classList.add("selected");
-
-     // Add normal link
      } else {
-          a.innerHTML = component.name;
-          if (window.location.pathname.startsWith("/maidkouciana")) {
-               a.href = window.location.origin + "/maidkouciana" + component.path;
+          let pathname = window.location.pathname;
+          if (component.path.startsWith("/news/?date=") && component.path.lastIndexOf("/") === component.path.length - 1) {
+               component.path = component.path.slice(0, -1);
+
+               pathname = window.location.pathname+"?date="+new URLSearchParams(window.location.search).get('date');
+          }
+
+          if (pathname === component.path || pathname === "/maidkouciana" + component.path) {
+               // Check if link is current page
+               a.innerHTML = component.name;
+               a.classList.add("selected");
+
           } else {
-               a.href = window.location.origin + component.path;
+               // Add normal link
+               a.innerHTML = component.name;
+               if (window.location.pathname.startsWith("/maidkouciana")) {
+                    a.href = window.location.origin + "/maidkouciana" + component.path;
+               } else {
+                    a.href = window.location.origin + component.path;
+               };
+               a.classList.add("select");
           };
-          a.classList.add("select");
-     };
+     }
 
      a.draggable = false;
 

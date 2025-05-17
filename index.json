@@ -12,6 +12,10 @@
                     {
                          "type": "text",
                          "text": "<b>2025.04.09</b> - MaidKouciana is discontinued. The bot is no longer maintained but may still receive updates. The bot will not be online other than for testing purposes (and for fun)."
+                    },
+                    {
+                         "type": "text",
+                         "text": "Please read the news article <a href=\"news/?date=2025.04.28\">End of Support</a> for more information."
                     }
                ]
           },

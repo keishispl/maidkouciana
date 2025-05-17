@@ -10,5 +10,13 @@
      {
           "name": "Invite Bot",
           "disabled": true
+     },
+     {
+          "name": "Source Code",
+          "disabled": true
+     },
+     {
+          "name": "End of Support",
+          "path": "/news/?date=2025.04.28/"
      }
 ]
