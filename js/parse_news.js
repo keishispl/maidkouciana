@@ -50,7 +50,8 @@ function renderNewsItem(newsItem) {
           // Create a link to the news item
           setHTMLObject(div, 'a', {
                class: 'cover-link',
-               href: `./news/?date=${date}`
+               href: `./news/?date=${date}`,
+               textContent: title + " | " + date
           });
 
           // Create the title element
