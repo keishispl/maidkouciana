@@ -1,9 +1,6 @@
 /**
- * Renders a news item
- *
- * @param {object} newsItem
- * @prop {string} date - The date of the news item in the format 'YYYY.MM.DD'
- * @prop {string} title - The title of the news item
+ * Renders a news item as a div containing a link to the news page, the title of the news, and the date of the news.
+ * @param {Object} newsItem - The news item to render. It should contain a date and title property.
  */
 function renderNewsItem(newsItem) {
      const { date, title } = newsItem;
@@ -19,7 +16,6 @@ function renderNewsItem(newsItem) {
      if (newsDate < now) {
           /**
            * Creates a new HTML object and sets its properties before appending it to a given body.
-           *
            * @param {HTMLElement} body - The body element to append the new HTML object to.
            * @param {string} item - The type of HTML object to create.
            * @param {Array} [object] - An array containing extra properties to set on the new HTML object. The property names are the names of the attributes to set, and the values are the values to set them to.
@@ -68,7 +64,7 @@ function renderNewsItem(newsItem) {
      }
 }
 
-// Wait 250 milliseconds before rendering the news items
+// Wait 100 milliseconds before rendering the news items
 setTimeout(() => {
      jsonFromFile('news').forEach(renderNewsItem);
-}, 250);
+}, 100);
